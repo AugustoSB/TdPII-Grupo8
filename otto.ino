@@ -10,6 +10,8 @@ Servo servo_der_rod;
 Servo servo_izq_pie;
 Servo servo_izq_rod;
 
+//ROUTINES - https://www.youtube.com/watch?v=VD6sgTo6NOY
+
 void walk_forward(){}
 
 void walk_backward(){}
@@ -20,7 +22,15 @@ void turn_right(){}
 
 void moonwalk(){}
 
-void bend(){}
+void bend(){
+	
+	servo_der_pie.write(135);
+	servo_der_pie.write(90);
+	delay(1000);
+	servo_izq_pie.write(45);
+	servo_izq_pie.write(90);
+
+}
 
 void shake_leg(){}
 
@@ -66,31 +76,14 @@ void setup() {
   servo_izq_pie.attach(GPIO_SERVO3);
   servo_izq_rod.attach(GPIO_SERVO4);
 
+  //set pos inicial
+  servo_izq_rod.write(90);
+  servo_der_pie.write(90);
+  servo_der_rod.write(90);
+  servo_izq_pie.write(90);
+
 }
 
 void loop() {
-
-  servo_der_pie.write(45);
-  delay(500);
-  servo_izq_rod.write(45);
-  delay(500);
-  servo_izq_rod.write(135);
-  delay(500);
-  servo_izq_rod.write(90);
-  delay(500);
-  servo_der_pie.write(90);
-  delay(500);
-  
-  servo_izq_pie.write(135);
-  delay(500);
-  servo_der_rod.write(45);
-  delay(500);
-  servo_der_rod.write(135);
-  delay(500);
-  servo_der_rod.write(90);
-  delay(500);
-  servo_izq_pie.write(90);
-  delay(500);
-
  
 }
