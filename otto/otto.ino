@@ -1,12 +1,14 @@
 #include <Servo.h>
 #include <ESP8266WiFi.h>
+#include <ESP8266WebServer.h>
 
 
 
 
 
 //macros
-
+#define TRUE 1
+#define FALSE 0
 //ultrasonido
 #define GPIO_TRIGGER 05 //D1
 #define GPIO_ECHO 04 //D2
@@ -21,7 +23,7 @@
 
 
 //variables globales
-
+ESP8266WebServer server(80);
 Servo servo_der_pie;
 Servo servo_der_rod;
 Servo servo_izq_pie;
