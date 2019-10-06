@@ -1,11 +1,7 @@
 from flask import Flask, render_template
 import requests
 
-
-
 app = Flask(__name__)
-
-
 
 @app.route('/')
 def principal():
@@ -21,6 +17,14 @@ def principal():
 def rutina_bend():
 	try:
 		requests.get('192.168.4.1/bend', timeout=0.1)
+	except:
+		pass
+	return render_template('pag.html')
+
+@app.route('/moonwalk')
+def rutina_moonwalk():
+	try:
+		requests.get('192.168.4.1/moonwalk', timeout=0.1)
 	except:
 		pass
 	return render_template('pag.html')
