@@ -1,3 +1,41 @@
+body{
+	background-color: powderblue;
+	text-align: center;
+}
 h1{
-	color:red;
+	color:blue;
+}
+p{
+	color: black;
+}
+
+div.container{
+	display:flex;
+	align-items: center;
+}
+
+/*div.sub{
+	width: 50%;
+	background-color: transparent;
+}*/
+
+div.t1{
+	background-color: red;
+	width: 50%;
+	/*display:flex;*/
+	/*height: 400px;*/
+}
+
+div.t2{
+	background-color: green;
+	width: 50%;
+	/*height: 400px;*/
+}
+
+a{
+	text-decoration: none;
+	background-color: white;
+	width: 50%;
+	margin: 10;
+	border: 1px solid black;
 }
