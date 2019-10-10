@@ -45,12 +45,18 @@ def rutina_turn_right():
 
 @app.route('/moonwalk')
 def rutina_moonwalk():
-	r = requests.get('http://192.168.4.1/moonwalk', timeout=1)
+	try:
+		r = requests.get('http://192.168.4.1/moonwalk', timeout=1)
+	except:
+		pass
 	return render_template('pag.html')
 
 @app.route('/bend')
 def rutina_bend():
-	r = requests.get('http://192.168.4.1/bend', timeout=1)
+	try:
+		r = requests.get('http://192.168.4.1/bend', timeout=1)
+	except:
+		pass
 	return render_template('pag.html')
 
 @app.route('/shake_leg')
@@ -71,7 +77,10 @@ def rutina_crusaito():
 
 @app.route('/flapping')
 def rutina_flapping():
-	r = requests.get('http://192.168.4.1/flapping', timeout=1)
+	try:
+		r = requests.get('http://192.168.4.1/flapping', timeout=1)
+	except:
+		pass
 	return render_template('pag.html')
 
 @app.route('/swing')
@@ -92,7 +101,10 @@ def rutina_tiptoe_swing():
 
 @app.route('/jitter')
 def rutina_jitter():
-	r = requests.get('http://192.168.4.1/jitter', timeout=1)
+	try:
+		r = requests.get('http://192.168.4.1/jitter', timeout=1)
+	except:
+		pass
 	return render_template('pag.html')
 
 
