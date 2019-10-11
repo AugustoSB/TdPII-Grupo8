@@ -45,6 +45,8 @@ void turn_right(){}
 
 void moonwalk(){
 
+  server.send(200, "text/plain", "recibido");
+
   //hacia un lado
   servo_der_pie.write(135);
   delay(250);
@@ -85,7 +87,9 @@ void moonwalk(){
 }
 
 void bend(){
-	
+
+  server.send(200, "text/plain", "recibido");
+  
 	servo_der_pie.write(135);
 	delay(250);
 	servo_der_pie.write(90);
@@ -101,6 +105,8 @@ void shake_leg(){}
 void crusaito(){}
 
 void flapping(){
+
+  server.send(200, "text/plain", "recibido");
 
   //hacia un lado
   //subir
@@ -238,6 +244,8 @@ void tiptoe_swing(){}
 
 void jitter(){
 
+  server.send(200, "text/plain", "recibido");
+
 	//1
   servo_der_pie.write(105);
   servo_izq_pie.write(75);
@@ -360,6 +368,7 @@ void setup() {
   server.on("/moonwalk", moonwalk);
   server.on("/bend", bend);
   server.on("/flapping", flapping);
+  server.on("/jitter", jitter);
   server.begin();
 
   //config servos
