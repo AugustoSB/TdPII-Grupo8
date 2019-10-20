@@ -368,7 +368,47 @@ void up_down(){
   servo_der_pie.write(95);
   servo_izq_pie.write(85);
 }
-void happy(){}
+void happy(){
+  delay(70);
+  servo_der_pie.write(86);
+  servo_izq_pie.write(82);
+  delay(70);
+  servo_der_pie.write(82);
+  servo_izq_pie.write(74);
+  delay(70);
+  servo_der_pie.write(78);
+  servo_izq_pie.write(66);
+  delay(70);
+  servo_der_pie.write(74);
+  servo_izq_pie.write(58);
+  delay(70);  
+  servo_der_pie.write(70);
+  servo_izq_pie.write(50);
+  delay(70);
+  servo_der_pie.write(82);
+  servo_izq_pie.write(62);
+  delay(70);
+  servo_der_pie.write(94);
+  servo_izq_pie.write(74);
+  delay(70);
+  servo_der_pie.write(106);
+  servo_izq_pie.write(86);
+  delay(70);
+  servo_der_pie.write(118);
+  servo_izq_pie.write(98);
+  delay(70);
+  servo_der_pie.write(130);
+  servo_izq_pie.write(110);
+  delay(70);
+  servo_der_pie.write(118);
+  servo_izq_pie.write(98);
+  delay(70);
+  servo_der_pie.write(114);
+  servo_izq_pie.write(95);
+  delay(70);
+  servo_der_pie.write(110);
+  servo_izq_pie.write(80);
+}
 
 void super_happy(){}
 
