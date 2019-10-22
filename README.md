@@ -8,7 +8,7 @@ archivo .py para el wrapper o servidor flask
 
 #como usar:
 
-NodeMCU levanta red 'OTTO', con ip 192.168.4.1
+NodeMCU levanta red 'OTTO', con contraseña '12345678' e ip 192.168.4.1
 
 conectarse a la red con la computadora que tiene el servidor flask
   servidor se levanta con '$python3 servidor.py'
