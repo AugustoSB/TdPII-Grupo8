@@ -13,11 +13,12 @@ def principal():
 
 @app.route('/walk_forward')
 def rutina_walk_forward():
+	#print("andooo")
 	try:
 		requests.get('http://192.168.4.1/walk_forward', timeout=0.1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/walk_backward')
 def rutina_walk_backward():
@@ -25,7 +26,7 @@ def rutina_walk_backward():
 		requests.get('http://192.168.4.1/walk_backward', timeout=0.1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/turn_left')
 def rutina_turn_left():
@@ -33,7 +34,7 @@ def rutina_turn_left():
 		requests.get('http://192.168.4.1/turn_left', timeout=0.1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/turn_right')
 def rutina_turn_right():
@@ -41,7 +42,7 @@ def rutina_turn_right():
 		requests.get('http://192.168.4.1/turn_right', timeout=0.1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/moonwalk')
 def rutina_moonwalk():
@@ -49,7 +50,7 @@ def rutina_moonwalk():
 		r = requests.get('http://192.168.4.1/moonwalk', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/bend')
 def rutina_bend():
@@ -57,7 +58,7 @@ def rutina_bend():
 		r = requests.get('http://192.168.4.1/bend', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/shake_leg')
 def rutina_shake_leg():
@@ -65,7 +66,7 @@ def rutina_shake_leg():
 		requests.get('http://192.168.4.1/shake_leg', timeout=0.1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/crusaito')
 def rutina_crusaito():
@@ -73,7 +74,7 @@ def rutina_crusaito():
 		requests.get('http://192.168.4.1/crusaito', timeout=0.1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/flapping')
 def rutina_flapping():
@@ -81,7 +82,7 @@ def rutina_flapping():
 		r = requests.get('http://192.168.4.1/flapping', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/swing')
 def rutina_swing():
@@ -89,7 +90,7 @@ def rutina_swing():
 		requests.get('http://192.168.4.1/swing', timeout=0.1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/tiptoe_swing')
 def rutina_tiptoe_swing():
@@ -97,7 +98,7 @@ def rutina_tiptoe_swing():
 		requests.get('http://192.168.4.1/tiptoe_swing', timeout=0.1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/jitter')
 def rutina_jitter():
@@ -105,7 +106,7 @@ def rutina_jitter():
 		r = requests.get('http://192.168.4.1/jitter', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/up_down')
 def rutina_up_down():
@@ -113,7 +114,7 @@ def rutina_up_down():
 		r = requests.get('http://192.168.4.1/up_down', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/happy')
 def rutina_happy():
@@ -121,7 +122,7 @@ def rutina_happy():
 		r = requests.get('http://192.168.4.1/happy', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/super_happy')
 def rutina_super_happy():
@@ -129,7 +130,7 @@ def rutina_super_happy():
 		r = requests.get('http://192.168.4.1/super_happy', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/sad')
 def rutina_sad():
@@ -137,7 +138,7 @@ def rutina_sad():
 		r = requests.get('http://192.168.4.1/sad', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/victory')
 def rutina_victory():
@@ -145,7 +146,7 @@ def rutina_victory():
 		r = requests.get('http://192.168.4.1/victory', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/angry')
 def rutina_angry():
@@ -153,7 +154,7 @@ def rutina_angry():
 		r = requests.get('http://192.168.4.1/angry', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/sleeping')
 def rutina_sleeping():
@@ -161,7 +162,7 @@ def rutina_sleeping():
 		r = requests.get('http://192.168.4.1/sleeping', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/fretful')
 def rutina_fretful():
@@ -169,7 +170,7 @@ def rutina_fretful():
 		r = requests.get('http://192.168.4.1/fretful', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/love')
 def rutina_love():
@@ -177,7 +178,7 @@ def rutina_love():
 		r = requests.get('http://192.168.4.1/love', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/confused')
 def rutina_confused():
@@ -185,7 +186,7 @@ def rutina_confused():
 		r = requests.get('http://192.168.4.1/confused', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/fart')
 def rutina_fart():
@@ -193,7 +194,7 @@ def rutina_fart():
 		r = requests.get('http://192.168.4.1/fart', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
 
 @app.route('/fail')
 def rutina_fail():
@@ -201,7 +202,15 @@ def rutina_fail():
 		r = requests.get('http://192.168.4.1/fail', timeout=1)
 	except:
 		pass
-	return render_template('pag.html')
+	return '', 204
+
+@app.route('/ultrasonido_on')
+def rutina_ultrasonido_on():
+	return '', 204
+
+@app.route('/ultrasonido_off')
+def rutina_ultrasonido_off():
+	return '', 204
 
 
 
