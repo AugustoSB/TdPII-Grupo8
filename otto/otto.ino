@@ -268,8 +268,48 @@ void shake_leg(){
 
 void crusaito(){
 
+  //solo pie der
+  servo_der_rod.write(70);
+  delay(200);
+  servo_der_pie.write(115);
+  delay(200);
+  servo_der_rod.write(90);
+  delay(200);
+  servo_der_rod.write(110);
+  servo_izq_rod.write(110);
+  delay(200);
+  servo_der_pie.write(90);
+  servo_izq_pie.write(65);
+  delay(200);
+  servo_der_rod.write(90);
+  servo_izq_rod.write(90);
+  delay(200);
+  servo_der_rod.write(70);
+  servo_izq_rod.write(70);
+  delay(200);
+  servo_der_pie.write(115);
+  servo_izq_pie.write(90);
+  delay(200);
+  servo_der_rod.write(90);
+  servo_izq_rod.write(90);
+  delay(200);
+  servo_der_rod.write(110);
+  servo_izq_rod.write(110);
+  delay(200);
+  servo_der_pie.write(90);
+  servo_izq_pie.write(65);
+  delay(200);
+  servo_der_rod.write(90);
+  servo_izq_rod.write(90);
+  delay(200);
+  servo_der_rod.write(70);
+  servo_izq_rod.write(70);
+  delay(200);
+  servo_izq_pie.write(90);
+  delay(200);
+  servo_der_rod.write(90);
+  servo_izq_rod.write(90);
 
-  
 }
 
 
@@ -700,7 +740,29 @@ void happy(){
 
 void super_happy(){
 
-
+  servo_der_pie.write(120);
+  servo_izq_pie.write(75);
+  delay(250);
+  servo_der_pie.write(105);
+  servo_izq_pie.write(60);
+  delay(100);
+  servo_der_pie.write(120);
+  servo_izq_pie.write(75);
+  delay(100);
+  servo_der_pie.write(105);
+  servo_izq_pie.write(60);
+  delay(250);
+  servo_der_pie.write(120);
+  servo_izq_pie.write(75);
+  delay(100);
+  servo_der_pie.write(105);
+  servo_izq_pie.write(60);
+  delay(100);
+  servo_der_pie.write(120);
+  servo_izq_pie.write(75);
+  delay(250);
+  servo_der_pie.write(90);
+  servo_izq_pie.write(90);
   
 }
 
@@ -1150,7 +1212,8 @@ void setup() {
 
 void loop() {
 
-  server.handleClient();
-  delay(1000);
+  //server.handleClient();
+  super_happy();
+  delay(3000);
 
 }
