@@ -28,6 +28,7 @@ Servo servo_der_pie;
 Servo servo_der_rod;
 Servo servo_izq_pie;
 Servo servo_izq_rod;
+bool ultrasonido_state = FALSE;
 
 
 
@@ -183,8 +184,6 @@ void turn_right(){
 
 void moonwalk(){
 
-  //server.send(200, "text/plain", "recibido");
-
   //hacia un lado
   servo_der_pie.write(135);
   delay(250);
@@ -227,8 +226,6 @@ void moonwalk(){
 
 
 void bend(){
-
-  //server.send(200, "text/plain", "recibido");
   
 	servo_der_pie.write(135);
 	delay(250);
@@ -315,8 +312,6 @@ void crusaito(){
 
 
 void flapping(){
-
-  //server.send(200, "text/plain", "recibido");
 
   //hacia un lado
   //subir
@@ -550,8 +545,6 @@ void tiptoe_swing(){
 
 
 void jitter(){
-
-  //server.send(200, "text/plain", "recibido");
 
 	//1
   servo_der_pie.write(105);
@@ -1137,6 +1130,18 @@ void fail(){
 
 
 
+void ultrasonido_on(){
+  ultrasonido_state = true;
+}
+
+
+
+void ultrasonido_off(){
+  ultrasonido_state = false;
+}
+
+
+
 
 
 //ultrasonido
@@ -1194,6 +1199,10 @@ void setup() {
   server.on("/confused", confused);
   server.on("/fart", fart);
   server.on("/fail", fail);
+
+  server.on("/ultrasonido_on", ultrasonido_on);
+  server.on("/ultrasonido_off", ultrasonido_off);
+
   server.begin();
 
   //config servos
@@ -1212,8 +1221,10 @@ void setup() {
 
 void loop() {
 
-  //server.handleClient();
-  super_happy();
-  delay(3000);
+  server.handleClient();
+  delay(100);
+  if(ultrasonido_state){
+    //
+  }
 
 }
