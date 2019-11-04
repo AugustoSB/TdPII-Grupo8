@@ -39,35 +39,26 @@ bool ultrasonido_state = FALSE;
 
 
 void walk_forward(){
-  
-  servo_der_pie.write(120);
-  delay(100);
-  servo_der_rod.write(70);
-  servo_izq_rod.write(70);
-  delay(100);
-  servo_der_pie.write(90);
-  delay(100);
-  servo_izq_pie.write(120);
-  delay(100);
-  servo_der_rod.write(110);
-  servo_izq_rod.write(110);
-  delay(100);
-  servo_izq_pie.write(90);
-  delay(100);
-  servo_der_pie.write(120);
-  delay(100);
-  servo_der_rod.write(70);
-  servo_izq_rod.write(70);
-  delay(100);
-  servo_der_pie.write(90);
-  delay(100);
-  servo_izq_pie.write(120);
-  delay(100);
-  servo_der_rod.write(110);
-  servo_izq_rod.write(110);
-  delay(100);
-  servo_izq_pie.write(90);
-  delay(100);
+
+  unsigned int i;
+
+  for(i=0 ; i<2 ; i++){
+	  servo_der_pie.write(120);
+	  delay(100);
+	  servo_der_rod.write(70);
+	  servo_izq_rod.write(70);
+	  delay(100);
+	  servo_der_pie.write(90);
+	  delay(100);
+	  servo_izq_pie.write(120);
+	  delay(100);
+	  servo_der_rod.write(110);
+	  servo_izq_rod.write(110);
+	  delay(100);
+	  servo_izq_pie.write(90);
+	  delay(100);
+  }
+
   servo_der_rod.write(90);
   servo_izq_rod.write(90);
 
@@ -77,34 +68,24 @@ void walk_forward(){
 
 void walk_backward(){
 
-  servo_der_pie.write(120);
-  delay(100);
-  servo_der_rod.write(110);
-  servo_izq_rod.write(110);
-  delay(100);
-  servo_der_pie.write(90);
-  delay(100);
-  servo_izq_pie.write(120);
-  delay(100);
-  servo_der_rod.write(70);
-  servo_izq_rod.write(70);
-  delay(100);
-  servo_izq_pie.write(90);
-  delay(100);
-  servo_der_pie.write(120);
-  delay(100);
-  servo_der_rod.write(110);
-  servo_izq_rod.write(110);
-  delay(100);
-  servo_der_pie.write(90);
-  delay(100);
-  servo_izq_pie.write(120);
-  delay(100);
-  servo_der_rod.write(70);
-  servo_izq_rod.write(70);
-  delay(100);
-  servo_izq_pie.write(90);
-  delay(100);
+  unsigned int i;
+
+  for(i=0 ; i<2 ; i++){
+	  servo_der_pie.write(120);
+	  delay(100);
+	  servo_der_rod.write(110);
+	  servo_izq_rod.write(110);
+	  delay(100);
+	  servo_der_pie.write(90);
+	  delay(100);
+	  servo_izq_pie.write(120);
+	  delay(100);
+	  servo_der_rod.write(70);
+	  servo_izq_rod.write(70);
+	  delay(100);
+	  servo_izq_pie.write(90);
+	  delay(100);
+	}
   servo_der_rod.write(90);
   servo_izq_rod.write(90);
   
@@ -114,34 +95,24 @@ void walk_backward(){
 
 void turn_left(){
   
-  servo_der_pie.write(120);
-  delay(100);
-  servo_der_rod.write(70);
-  servo_izq_rod.write(90);
-  delay(100);
-  servo_der_pie.write(90);
-  delay(100);
-  servo_izq_pie.write(60);
-  delay(100);
-  servo_der_rod.write(110);
-  servo_izq_rod.write(90);
-  delay(100);
-  servo_izq_pie.write(90);
-  delay(100);
-  servo_der_pie.write(120);
-  delay(100);
-  servo_der_rod.write(70);
-  servo_izq_rod.write(90);
-  delay(100);
-  servo_der_pie.write(90);
-  delay(100);
-  servo_izq_pie.write(60);
-  delay(100);
-  servo_der_rod.write(110);
-  servo_izq_rod.write(90);
-  delay(100);
-  servo_izq_pie.write(90);
-  delay(100);
+  unsigned int i;
+  for(i=0 ; i<2 ; i++){
+	  servo_der_pie.write(120);
+	  delay(100);
+	  servo_der_rod.write(70);
+	  servo_izq_rod.write(90);
+	  delay(100);
+	  servo_der_pie.write(90);
+	  delay(100);
+	  servo_izq_pie.write(60);
+	  delay(100);
+	  servo_der_rod.write(110);
+	  servo_izq_rod.write(90);
+	  delay(100);
+	  servo_izq_pie.write(90);
+	  delay(100);
+
+  }
   servo_der_rod.write(90);
   servo_izq_rod.write(90);
   
@@ -150,31 +121,23 @@ void turn_left(){
 
 
 void turn_right(){
-  
-  servo_der_pie.write(120);
-  delay(100);
-  servo_izq_rod.write(70);
-  delay(100);
-  servo_der_pie.write(90);
-  delay(100);
-  servo_izq_pie.write(120);
-  delay(100);
-  servo_izq_rod.write(110);
-  delay(100);
-  servo_izq_pie.write(90);
-  delay(100);
-  servo_der_pie.write(120);
-  delay(100);
-  servo_izq_rod.write(70);
-  delay(100);
-  servo_der_pie.write(90);
-  delay(100);
-  servo_izq_pie.write(120);
-  delay(100);
-  servo_izq_rod.write(110);
-  delay(100);
-  servo_izq_pie.write(90);
-  delay(100);
+  unsigned int i;
+  for(i=0; i<2; i++){
+
+	  servo_der_pie.write(120);
+	  delay(100);
+	  servo_izq_rod.write(70);
+	  delay(100);
+	  servo_der_pie.write(90);
+	  delay(100);
+	  servo_izq_pie.write(120);
+	  delay(100);
+	  servo_izq_rod.write(110);
+	  delay(100);
+	  servo_izq_pie.write(90);
+	  delay(100);
+	  
+	}
   servo_der_rod.write(90);
   servo_izq_rod.write(90);
 
@@ -265,7 +228,6 @@ void shake_leg(){
 
 void crusaito(){
 
-  //solo pie der
   servo_der_rod.write(70);
   delay(200);
   servo_der_pie.write(115);
@@ -313,177 +275,252 @@ void crusaito(){
 
 void flapping(){
 
-  //hacia un lado
-  //subir
-  servo_der_pie.write(100);
-  servo_izq_pie.write(80);
-  servo_der_rod.write(95);
-  servo_izq_rod.write(85);
-  delay(200);
-  servo_der_pie.write(110);
-  servo_izq_pie.write(70);
-  servo_der_rod.write(100);
-  servo_izq_rod.write(80);
-  delay(200);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(60);
-  servo_der_rod.write(105);
-  servo_izq_rod.write(75);
-  delay(200);
-  servo_der_pie.write(125);
-  servo_izq_pie.write(55);
-  servo_der_rod.write(100);
-  servo_izq_rod.write(80);
-  delay(200);
-  servo_der_pie.write(130);
-  servo_izq_pie.write(50);
-  servo_der_rod.write(95);
-  servo_izq_rod.write(85);
-  delay(200);
-  servo_der_pie.write(135);
-  servo_izq_pie.write(45);
-  servo_der_rod.write(90);
-  servo_izq_rod.write(90);
-  delay(200);
-  //bajar
-  servo_der_pie.write(130);
-  servo_izq_pie.write(50);
-  servo_der_rod.write(95);
-  servo_izq_rod.write(85);
-  delay(200);
-  servo_der_pie.write(125);
-  servo_izq_pie.write(55);
-  servo_der_rod.write(100);
-  servo_izq_rod.write(80);
-  delay(200);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(60);
-  servo_der_rod.write(105);
-  servo_izq_rod.write(75);
-  delay(200);
-  servo_der_pie.write(110);
-  servo_izq_pie.write(70);
-  servo_der_rod.write(100);
-  servo_izq_rod.write(80);
-  delay(200);
-  servo_der_pie.write(100);
-  servo_izq_pie.write(80);
-  servo_der_rod.write(95);
-  servo_izq_rod.write(85);
-  delay(200);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(90);
-  servo_der_rod.write(90);
-  servo_izq_rod.write(90);
-  delay(200);
+	unsigned int i;
+	//hacia un lado
+	//subir
+	for(i=1 ; i<=3 ; i++){
+		servo_der_pie.write(90+(i*10));
+		servo_izq_pie.write(90-(i*10));
+		servo_der_rod.write(90+(i*5));
+		servo_izq_rod.write(90-(i*5));
+		delay(200);
+	}
+	/*
+	servo_der_pie.write(100);
+	servo_izq_pie.write(80);
+	servo_der_rod.write(95);
+	servo_izq_rod.write(85);
+	delay(200);
+	servo_der_pie.write(110);
+	servo_izq_pie.write(70);
+	servo_der_rod.write(100);
+	servo_izq_rod.write(80);
+	delay(200);
+	servo_der_pie.write(120);
+	servo_izq_pie.write(60);
+	servo_der_rod.write(105);
+	servo_izq_rod.write(75);
+	delay(200);
+	 */
 
-  //hacia el otro
-  //subir
-  servo_der_pie.write(100);
-  servo_izq_pie.write(80);
-  servo_izq_rod.write(95);
-  servo_der_rod.write(85);
-  delay(200);
-  servo_der_pie.write(110);
-  servo_izq_pie.write(70);
-  servo_izq_rod.write(100);
-  servo_der_rod.write(80);
-  delay(200);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(60);
-  servo_izq_rod.write(105);
-  servo_der_rod.write(75);
-  delay(200);
-  servo_der_pie.write(125);
-  servo_izq_pie.write(55);
-  servo_izq_rod.write(100);
-  servo_der_rod.write(80);
-  delay(200);
-  servo_der_pie.write(130);
-  servo_izq_pie.write(50);
-  servo_izq_rod.write(95);
-  servo_der_rod.write(85);
-  delay(200);
-  servo_der_pie.write(135);
-  servo_izq_pie.write(45);
-  servo_izq_rod.write(90);
-  servo_der_rod.write(90);
-  delay(200);
+	for(i=1 ; i<=3 ; i++){
+		servo_der_pie.write(120+i*5);
+		servo_izq_pie.write(60-i*5);
+		servo_der_rod.write(105-i*5);
+		servo_izq_rod.write(75+i*5);
+		delay(200);
+	}
+	/*
+	servo_der_pie.write(125);
+	servo_izq_pie.write(55);
+	servo_der_rod.write(100);
+	servo_izq_rod.write(80);
+	delay(200);
+	servo_der_pie.write(130);
+	servo_izq_pie.write(50);
+	servo_der_rod.write(95);
+	servo_izq_rod.write(85);
+	delay(200);
+	servo_der_pie.write(135);
+	servo_izq_pie.write(45);
+	servo_der_rod.write(90);
+	servo_izq_rod.write(90);
+	delay(200);
+	*/
+
   //bajar
-  servo_der_pie.write(130);
-  servo_izq_pie.write(50);
-  servo_izq_rod.write(95);
-  servo_der_rod.write(85);
-  delay(200);
-  servo_der_pie.write(125);
-  servo_izq_pie.write(55);
-  servo_izq_rod.write(100);
-  servo_der_rod.write(80);
-  delay(200);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(60);
-  servo_izq_rod.write(105);
-  servo_der_rod.write(75);
-  delay(200);
-  servo_der_pie.write(110);
-  servo_izq_pie.write(70);
-  servo_izq_rod.write(100);
-  servo_der_rod.write(80);
-  delay(200);
-  servo_der_pie.write(100);
-  servo_izq_pie.write(80);
-  servo_izq_rod.write(95);
-  servo_der_rod.write(85);
-  delay(200);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(90);
-  servo_izq_rod.write(90);
-  servo_der_rod.write(90);
-  delay(200);
-  
+	for(i=1; i<=3; i++){
+
+		servo_der_pie.write(135-i*5);
+	  	servo_izq_pie.write(45+i*5);
+  		servo_der_rod.write(90+i*5);
+	  	servo_izq_rod.write(90-i*5);
+	  	delay(200);
+	}
+
+  // servo_der_pie.write(130);
+  // servo_izq_pie.write(50);
+  // servo_der_rod.write(95);
+  // servo_izq_rod.write(85);
+  // delay(200);
+  // servo_der_pie.write(125);
+  // servo_izq_pie.write(55);
+  // servo_der_rod.write(100);
+  // servo_izq_rod.write(80);
+  // delay(200);
+  // servo_der_pie.write(120);
+  // servo_izq_pie.write(60);
+  // servo_der_rod.write(105);
+  // servo_izq_rod.write(75);
+  // delay(200);
+
+for(i=1; i<=3; i++){
+  servo_der_pie.write(120-i*10);
+  servo_izq_pie.write(60+i*10);
+  servo_der_rod.write(105-i*5);
+  servo_izq_rod.write(75+i*5);
+}
+  // servo_der_pie.write(110);
+  // servo_izq_pie.write(70);
+  // servo_der_rod.write(100);
+  // servo_izq_rod.write(80);
+  // delay(200);
+  // servo_der_pie.write(100);
+  // servo_izq_pie.write(80);
+  // servo_der_rod.write(95);
+  // servo_izq_rod.write(85);
+  // delay(200);
+  // servo_der_pie.write(90);
+  // servo_izq_pie.write(90);
+  // servo_der_rod.write(90);
+  // servo_izq_rod.write(90);
+  // delay(200);
+
+	//hacia el otro
+	//subir
+	for (i = 1; i<=3; i++)
+	{
+		servo_der_pie.write(90+i*10);
+		servo_izq_pie.write(90-i*10);
+		servo_der_rod.write(90+i*5);
+		servo_izq_rod.write(90-i*5);
+	}
+	/*
+	servo_der_pie.write(100);
+	servo_izq_pie.write(80);
+	servo_izq_rod.write(95);
+	servo_der_rod.write(85);
+	delay(200);
+	servo_der_pie.write(110);
+	servo_izq_pie.write(70);
+	servo_izq_rod.write(100);
+	servo_der_rod.write(80);
+	delay(200);
+	servo_der_pie.write(120);
+	servo_izq_pie.write(60);
+	servo_izq_rod.write(105);
+	servo_der_rod.write(75);
+	delay(200);
+	*/
+	for (i = 1; i<=3; i++)
+	{
+		servo_der_pie.write(120+i*5);
+		servo_izq_pie.write(60-i*5);
+		servo_der_rod.write(105-i*5);
+		servo_izq_rod.write(75+i*5);
+	}
+	/*
+	servo_der_pie.write(125);
+	servo_izq_pie.write(55);
+	servo_izq_rod.write(100);
+	servo_der_rod.write(80);
+	delay(200);
+	servo_der_pie.write(130);
+	servo_izq_pie.write(50);
+	servo_izq_rod.write(95);
+	servo_der_rod.write(85);
+	delay(200);
+	servo_der_pie.write(135);
+	servo_izq_pie.write(45);
+	servo_izq_rod.write(90);
+	servo_der_rod.write(90);
+	delay(200);
+	*/
+//bajar
+	for (i = 1; i<=3; i++)
+	{
+		servo_der_pie.write(135-i*5);
+		servo_izq_pie.write(45+i*5);
+		servo_der_rod.write(90+i*5);
+		servo_izq_rod.write(90-i*5);
+	}
+	/*
+	servo_der_pie.write(130);
+	servo_izq_pie.write(50);
+	servo_izq_rod.write(95);
+	servo_der_rod.write(85);
+	delay(200);
+	servo_der_pie.write(125);
+	servo_izq_pie.write(55);
+	servo_izq_rod.write(100);
+	servo_der_rod.write(80);
+	delay(200);
+	servo_der_pie.write(120);
+	servo_izq_pie.write(60);
+	servo_izq_rod.write(105);
+	servo_der_rod.write(75);
+	delay(200);
+	*/
+	for (i = 1; i<=3; i++)
+	{
+		servo_der_pie.write(120-i*10);
+		servo_izq_pie.write(60+i*10);
+		servo_der_rod.write(105-i*5);
+		servo_izq_rod.write(75+i*5);
+	}
+	/*
+	servo_der_pie.write(110);
+	servo_izq_pie.write(70);
+	servo_izq_rod.write(100);
+	servo_der_rod.write(80);
+	delay(200);
+	servo_der_pie.write(100);
+	servo_izq_pie.write(80);
+	servo_izq_rod.write(95);
+	servo_der_rod.write(85);
+	delay(200);
+	servo_der_pie.write(90);
+	servo_izq_pie.write(90);
+	servo_izq_rod.write(90);
+	servo_der_rod.write(90);
+	delay(200);
+	*/
 }
 
 
 
 void swing(){
+	unsigned int j;
+  	servo_izq_pie.write(70);
+ 	delay(100);
+  servo_izq_pie.write(50);
+  delay(200);
+  //
+  for(j=1; j<=2; j++){
+	  servo_der_pie.write(110);
+	  servo_izq_pie.write(70);
+	  delay(200);
+	  servo_der_pie.write(130);
+	  servo_izq_pie.write(90);
+	  delay(200);
+	  servo_der_pie.write(110);
+	  servo_izq_pie.write(70);
+	  delay(200);
+	  servo_der_pie.write(90);
+	  servo_izq_pie.write(50);
+	  delay(200);
 
-  servo_izq_pie.write(70);
-  delay(100);
-  servo_izq_pie.write(50);
-  delay(200);
+  }
   //
-  servo_der_pie.write(110);
-  servo_izq_pie.write(70);
-  delay(200);
-  servo_der_pie.write(130);
-  servo_izq_pie.write(90);
-  delay(200);
-  servo_der_pie.write(110);
-  servo_izq_pie.write(70);
-  delay(200);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(50);
-  delay(200);
+  // servo_der_pie.write(110);
+  // servo_izq_pie.write(70);
+  // delay(200);
+  // servo_der_pie.write(130);
+  // servo_izq_pie.write(90);
+  // delay(200);
+  // servo_der_pie.write(110);
+  // servo_izq_pie.write(70);
+  // delay(200);
+  // servo_der_pie.write(90);
+  // servo_izq_pie.write(50);
+  // delay(200);
   //
-  servo_der_pie.write(110);
-  servo_izq_pie.write(70);
-  delay(200);
-  servo_der_pie.write(130);
-  servo_izq_pie.write(90);
-  delay(200);
-  servo_der_pie.write(110);
-  servo_izq_pie.write(70);
-  delay(200);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(50);
-  delay(200);
-  //
+
   servo_der_pie.write(130);
   servo_izq_pie.write(50);
   delay(200);
   servo_der_pie.write(160);
   servo_izq_pie.write(70);
-  delay(200);
   delay(200);
   servo_der_pie.write(130);
   servo_izq_pie.write(50);
@@ -500,33 +537,36 @@ void swing(){
 
 
 void tiptoe_swing(){
-
+unsigned int i;
   //mover rodillas 2 veces
-  servo_izq_rod.write(70);
-  servo_der_rod.write(110);
-  delay(150);
-  servo_izq_rod.write(90);
-  servo_der_rod.write(90);
-  delay(100);
-  servo_izq_rod.write(110);
-  servo_der_rod.write(70);
-  delay(150);
-  servo_izq_rod.write(90);
-  servo_der_rod.write(90);
-  delay(100);
+	for(i=1; i<=2; i++){
+	  servo_izq_rod.write(70);
+	  servo_der_rod.write(110);
+	  delay(150);
+	  servo_izq_rod.write(90);
+	  servo_der_rod.write(90);
+	  delay(100);
+	  servo_izq_rod.write(110);
+	  servo_der_rod.write(70);
+	  delay(150);
+	  servo_izq_rod.write(90);
+	  servo_der_rod.write(90);
+	  delay(100);
+
+	}
   //segunda vez
-  servo_izq_rod.write(70);
-  servo_der_rod.write(110);
-  delay(150);
-  servo_izq_rod.write(90);
-  servo_der_rod.write(90);
-  delay(100);
-  servo_izq_rod.write(110);
-  servo_der_rod.write(70);
-  delay(150);
-  servo_izq_rod.write(90);
-  servo_der_rod.write(90);
-  delay(100);
+  // servo_izq_rod.write(70);
+  // servo_der_rod.write(110);
+  // delay(150);
+  // servo_izq_rod.write(90);
+  // servo_der_rod.write(90);
+  // delay(100);
+  // servo_izq_rod.write(110);
+  // servo_der_rod.write(70);
+  // delay(150);
+  // servo_izq_rod.write(90);
+  // servo_der_rod.write(90);
+  // delay(100);
   //mover pies
   servo_izq_pie.write(70);
   servo_der_pie.write(110);
@@ -553,13 +593,13 @@ void jitter(){
   servo_der_pie.write(120);
   servo_izq_pie.write(60);
   delay(200);
-  servo_der_pie.write(120);
   servo_izq_pie.write(75);
   delay(200);
   servo_der_pie.write(90);
   servo_izq_pie.write(90);
   delay(200);
   //2
+
   servo_der_pie.write(105);
   servo_izq_pie.write(75);
   servo_izq_rod.write(95);
@@ -570,7 +610,6 @@ void jitter(){
   servo_izq_rod.write(100);
   servo_der_rod.write(80);
   delay(200);
-  servo_der_pie.write(120);
   servo_izq_pie.write(75);
   servo_izq_rod.write(95);
   servo_der_rod.write(85);
@@ -608,55 +647,84 @@ void jitter(){
 
 void up_down(){
 
-  servo_der_pie.write(95);
-  servo_izq_pie.write(85);
-  delay(30);
-  servo_der_pie.write(100);
-  servo_izq_pie.write(70);
-  delay(30);
-  servo_der_pie.write(105);
-  servo_izq_pie.write(65);
-  delay(35);
-  servo_der_pie.write(110);
-  servo_izq_pie.write(60);
-  delay(40);
-  servo_der_pie.write(115);
-  servo_izq_pie.write(55);
-  delay(45);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(50);
-  delay(50);
-  servo_der_pie.write(125);
-  servo_izq_pie.write(45);
-  delay(55);
-  servo_der_rod.write(92);
-  servo_izq_rod.write(88);
-  servo_der_pie.write(130);
-  servo_izq_pie.write(40);
-  delay(60);
-  servo_der_rod.write(94);
-  servo_izq_rod.write(86);
-  servo_der_pie.write(135);
-  servo_izq_pie.write(35);
-  delay(65);
-  servo_der_rod.write(95);
-  servo_izq_rod.write(85);
-  servo_der_pie.write(140);
-  servo_izq_pie.write(30);
+	unsigned int i;
+
+	for(i=1 ; i<=6 ; i++){
+		servo_der_pie.write(90+i*5);
+		servo_izq_pie.write(90-i*5);
+		delay(20+i*5);
+	}
+	/*
+	servo_der_pie.write(95);
+	servo_izq_pie.write(85);
+	delay(25);
+	servo_der_pie.write(100);
+	servo_izq_pie.write(70);
+	delay(30);
+	servo_der_pie.write(105);
+	servo_izq_pie.write(65);
+	delay(35);
+	servo_der_pie.write(110);
+	servo_izq_pie.write(60);
+	delay(40);
+	servo_der_pie.write(115);
+	servo_izq_pie.write(55);
+	delay(45);
+	servo_der_pie.write(120);
+	servo_izq_pie.write(50);
+	delay(50);
+	servo_der_pie.write(125);
+	servo_izq_pie.write(45);
+	delay(55);
+	*/
+	for(i=1 ; i<=3 ; i++){
+		servo_der_rod.write(90+i*2);
+		servo_izq_rod.write(90-i*2);
+		servo_der_pie.write(125+i*5);
+		servo_izq_pie.write(45-i*5);
+		delay(55+i*5);
+	}
+	delay(30);
+	/*
+	servo_der_rod.write(92);
+	servo_izq_rod.write(88);
+	servo_der_pie.write(130);
+	servo_izq_pie.write(40);
+	delay(60);
+	servo_der_rod.write(94);
+	servo_izq_rod.write(86);
+	servo_der_pie.write(135);
+	servo_izq_pie.write(35);
+	delay(65);
+	servo_der_rod.write(95);
+	servo_izq_rod.write(85);
+	servo_der_pie.write(140);
+	servo_izq_pie.write(30);
+	delay(100);
+	*/
   
-  delay(100);
-  
-  servo_der_rod.write(94);
-  servo_izq_rod.write(86);
-  servo_der_pie.write(135);
-  servo_izq_pie.write(35);
-  delay(65);
-  
-  servo_der_rod.write(92);
-  servo_izq_rod.write(88);
-  servo_der_pie.write(130);
-  servo_izq_pie.write(40);
-  delay(60);
+
+	for(i=1 ; i<=2 ; i++){
+		servo_der_rod.write(96-i*2);
+		servo_izq_rod.write(84+i*2);
+		servo_der_pie.write(140-i*5);
+		servo_izq_pie.write(30+i*5);
+		delay(70-i*5);
+	}
+	/*
+	servo_der_rod.write(94);
+	servo_izq_rod.write(86);
+	servo_der_pie.write(135);
+	servo_izq_pie.write(35);
+	delay(65);
+
+	servo_der_rod.write(92);
+	servo_izq_rod.write(88);
+	servo_der_pie.write(130);
+	servo_izq_pie.write(40);
+	delay(60);
+	*/
+
   servo_der_pie.write(125);
   servo_izq_pie.write(45);
   delay(55);
@@ -763,64 +831,87 @@ void super_happy(){
 
 void sad(){
 
-  servo_der_rod.write(88);
-  servo_izq_rod.write(94);
-  servo_der_pie.write(81);
-  servo_izq_pie.write(102);
-  delay(55);
-  servo_der_rod.write(86);
-  servo_izq_rod.write(98);
-  servo_der_pie.write(72);
-  servo_izq_pie.write(114);
-  delay(55);
-  servo_der_rod.write(84);
-  servo_izq_rod.write(102);
-  servo_der_pie.write(63);
-  servo_izq_pie.write(126);
-  delay(55);
-  servo_der_rod.write(82);
-  servo_izq_rod.write(106);
-  servo_der_pie.write(54);
-  servo_izq_pie.write(138);
-  delay(55);
-  servo_der_rod.write(80);
-  servo_izq_rod.write(110);
-  servo_der_pie.write(45);
-  servo_izq_pie.write(150);
-  
-  delay(4000);
+	unsigned int i;
 
-  servo_der_rod.write(82);
-  servo_izq_rod.write(106);
-  servo_der_pie.write(54);
-  servo_izq_pie.write(138);
-  delay(55);
-  servo_der_rod.write(84);
-  servo_izq_rod.write(102);
-  servo_der_pie.write(63);
-  servo_izq_pie.write(126);
-  delay(55);
-  servo_der_rod.write(86);
-  servo_izq_rod.write(98);
-  servo_der_pie.write(72);
-  servo_izq_pie.write(114);
-  delay(55);
-  servo_der_rod.write(88);
-  servo_izq_rod.write(94);
-  servo_der_pie.write(81);
-  servo_izq_pie.write(102);
-  delay(55);
-  servo_der_rod.write(90);
-  servo_izq_rod.write(90);
-  servo_izq_pie.write(90);
-  servo_der_pie.write(90);
-  
+	for(i=1 ; i<=5 ; i++){
+		servo_der_rod.write(90-i*2);
+		servo_izq_rod.write(90+i*4);
+		servo_der_pie.write(90-i*9);
+		servo_izq_pie.write(90+i*12);
+		delay(55);
+	}
+	/*
+	servo_der_rod.write(88);
+	servo_izq_rod.write(94);
+	servo_der_pie.write(81);
+	servo_izq_pie.write(102);
+	delay(55);
+	servo_der_rod.write(86);
+	servo_izq_rod.write(98);
+	servo_der_pie.write(72);
+	servo_izq_pie.write(114);
+	delay(55);
+	servo_der_rod.write(84);
+	servo_izq_rod.write(102);
+	servo_der_pie.write(63);
+	servo_izq_pie.write(126);
+	delay(55);
+	servo_der_rod.write(82);
+	servo_izq_rod.write(106);
+	servo_der_pie.write(54);
+	servo_izq_pie.write(138);
+	delay(55);
+	servo_der_rod.write(80);
+	servo_izq_rod.write(110);
+	servo_der_pie.write(45);
+	servo_izq_pie.write(150);
+	*/
+	delay(4000);
+	for(i=1 ; i<=5 ; i++){
+		servo_der_rod.write(80+i*2);
+		servo_izq_rod.write(110-i*4);
+		servo_der_pie.write(45+i*9);
+		servo_izq_pie.write(150-i*12);
+		delay(55);
+	}
+	/*
+	servo_der_rod.write(82);
+	servo_izq_rod.write(106);
+	servo_der_pie.write(54);
+	servo_izq_pie.write(138);
+	delay(55);
+	servo_der_rod.write(84);
+	servo_izq_rod.write(102);
+	servo_der_pie.write(63);
+	servo_izq_pie.write(126);
+	delay(55);
+	servo_der_rod.write(86);
+	servo_izq_rod.write(98);
+	servo_der_pie.write(72);
+	servo_izq_pie.write(114);
+	delay(55);
+	servo_der_rod.write(88);
+	servo_izq_rod.write(94);
+	servo_der_pie.write(81);
+	servo_izq_pie.write(102);
+	delay(55);
+	servo_der_rod.write(90);
+	servo_izq_rod.write(90);
+	servo_izq_pie.write(90);
+	servo_der_pie.write(90);
+	*/
 }
 
 
 
 void victory(){
-  
+  unsigned int i;
+  for(i=1; i<=6;i++){
+ 	 servo_der_pie.write(90+i*5);
+ 	 servo_izq_pie.write(90-i*5);
+ 	 delay(25+i*5);	
+  }
+  /*
   servo_der_pie.write(95);
   servo_izq_pie.write(85);
   delay(30);
@@ -842,6 +933,15 @@ void victory(){
   servo_der_pie.write(125);
   servo_izq_pie.write(45);
   delay(55);
+*/
+ 	for(i=1; i<3; i++){
+		servo_der_rod.write(90+i*2);
+		servo_izq_rod.write(90-i*2);
+		servo_der_pie.write(125+i*5);
+		servo_izq_pie.write(45-i*5);
+		delay(60);
+ 	}
+ 	/*
   servo_der_rod.write(92);
   servo_izq_rod.write(88);
   servo_der_pie.write(130);
@@ -856,9 +956,20 @@ void victory(){
   servo_izq_rod.write(85);
   servo_der_pie.write(140);
   servo_izq_pie.write(30);
- 
+ */
   delay(100);
-  
+  for (i = 1; i <= 2; i++)
+  {
+	  servo_der_rod.write(96-i*2);
+	  servo_izq_rod.write(84+i*2);
+	  servo_der_pie.write(140-i*5);
+	  servo_izq_pie.write(30+i*5);
+	  delay(70-i*5);
+	  	
+
+  	/* code */
+  }
+  /*
   servo_der_rod.write(94);
   servo_izq_rod.write(86);
   servo_der_pie.write(135);
@@ -870,6 +981,14 @@ void victory(){
   servo_der_pie.write(130);
   servo_izq_pie.write(40);
   delay(60);
+ */
+  for(i=1; i<8; i++){
+
+ 	 servo_der_pie.write(130-i*5);
+ 	 servo_izq_pie.write(40+i*5);
+ 	 delay(60-i*4);	
+  }
+  /*
   servo_der_pie.write(125);
   servo_izq_pie.write(45);
   delay(55);
@@ -896,13 +1015,29 @@ void victory(){
   delay(30);
   servo_der_pie.write(90);
   servo_izq_pie.write(90);
-  
+  */
   delay(100);
   servo_izq_pie.write(70);
   delay(100);
   servo_izq_pie.write(50);
   delay(100);
   //
+  for(i=1; i<=2; i++){
+	servo_der_pie.write(110);
+	servo_izq_pie.write(70);
+	delay(100);
+	servo_der_pie.write(130);
+	servo_izq_pie.write(90);
+	delay(100);
+	servo_der_pie.write(110);
+	servo_izq_pie.write(70);
+	delay(100);
+	servo_der_pie.write(90);
+	servo_izq_pie.write(50);
+	delay(100);
+  }
+  //
+/*
   servo_der_pie.write(110);
   servo_izq_pie.write(70);
   delay(100);
@@ -915,19 +1050,7 @@ void victory(){
   servo_der_pie.write(90);
   servo_izq_pie.write(50);
   delay(100);
-  //
-  servo_der_pie.write(110);
-  servo_izq_pie.write(70);
-  delay(100);
-  servo_der_pie.write(130);
-  servo_izq_pie.write(90);
-  delay(100);
-  servo_der_pie.write(110);
-  servo_izq_pie.write(70);
-  delay(100);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(50);
-  delay(100);
+*/
   servo_izq_pie.write(90);
 
 }
@@ -1110,42 +1233,59 @@ delay(115);
 
 void confused(){
   
-  servo_izq_rod.write(95);
-  servo_der_rod.write(85);
-  delay(150);
-  servo_izq_rod.write(100);
-  servo_der_rod.write(80);
-  delay(150);
-  servo_izq_rod.write(105);
-  servo_der_rod.write(75);
-  delay(150);
-  servo_izq_rod.write(110);
-  servo_der_rod.write(70);
-  delay(150);
-  servo_izq_rod.write(115);
-  servo_der_rod.write(65);
-  delay(150);
-  servo_izq_rod.write(120);
-  servo_der_rod.write(60);
-  delay(800);
-  servo_izq_rod.write(115);
-  servo_der_rod.write(65);
-  delay(150);
-  servo_izq_rod.write(110);
-  servo_der_rod.write(70);
-  delay(150);
-  servo_izq_rod.write(105);
-  servo_der_rod.write(75);
-  delay(150);
-  servo_izq_rod.write(100);
-  servo_der_rod.write(80);
-  delay(150);
-  servo_izq_rod.write(95);
-  servo_der_rod.write(85);
-  delay(150);
-  servo_izq_rod.write(90);
-  servo_der_rod.write(90);
+	unsigned int i;
 
+	for(i=1 ; i<6 ; i++){
+		servo_izq_rod.write(90+i*5);
+		servo_der_rod.write(90-i*5);
+		delay(150);
+	}
+	delay(650);
+	/*
+	servo_izq_rod.write(95);
+	servo_der_rod.write(85);
+	delay(150);
+	servo_izq_rod.write(100);
+	servo_der_rod.write(80);
+	delay(150);
+	servo_izq_rod.write(105);
+	servo_der_rod.write(75);
+	delay(150);
+	servo_izq_rod.write(110);
+	servo_der_rod.write(70);
+	delay(150);
+	servo_izq_rod.write(115);
+	servo_der_rod.write(65);
+	delay(150);
+	servo_izq_rod.write(120);
+	servo_der_rod.write(60);
+	delay(800);
+	*/
+	for(i=1 ; i<6 ; i++){
+		servo_izq_rod.write(120-i*5);
+		servo_der_rod.write(60+i*5);
+		delay(150);
+	}
+	delay(650);
+	/*
+	servo_izq_rod.write(115);
+	servo_der_rod.write(65);
+	delay(150);
+	servo_izq_rod.write(110);
+	servo_der_rod.write(70);
+	delay(150);
+	servo_izq_rod.write(105);
+	servo_der_rod.write(75);
+	delay(150);
+	servo_izq_rod.write(100);
+	servo_der_rod.write(80);
+	delay(150);
+	servo_izq_rod.write(95);
+	servo_der_rod.write(85);
+	delay(150);
+	servo_izq_rod.write(90);
+	servo_der_rod.write(90);
+	*/
 }
 
 
