@@ -40,27 +40,28 @@ bool ultrasonido_state = false;
 
 void walk_forward(){
 
-  unsigned int i;
+	unsigned int i;
 
-  for(i=0 ; i<2 ; i++){
-	  servo_der_pie.write(120);
-	  delay(100);
-	  servo_der_rod.write(70);
-	  servo_izq_rod.write(70);
-	  delay(100);
-	  servo_der_pie.write(90);
-	  delay(100);
-	  servo_izq_pie.write(120);
-	  delay(100);
-	  servo_der_rod.write(110);
-	  servo_izq_rod.write(110);
-	  delay(100);
-	  servo_izq_pie.write(90);
-	  delay(100);
-  }
+	Serial.println("Ejecutando walk forward.");
 
-  servo_der_rod.write(90);
-  servo_izq_rod.write(90);
+	for(i=0 ; i<2 ; i++){
+		servo_der_pie.write(120);
+		delay(100);
+		servo_der_rod.write(70);
+		servo_izq_rod.write(70);
+		delay(100);
+		servo_der_pie.write(90);
+		delay(100);
+		servo_izq_pie.write(120);
+		delay(100);
+		servo_der_rod.write(110);
+		servo_izq_rod.write(110);
+		delay(100);
+		servo_izq_pie.write(90);
+		delay(100);
+	}
+	servo_der_rod.write(90);
+	servo_izq_rod.write(90);
 
 }
 
@@ -68,54 +69,58 @@ void walk_forward(){
 
 void walk_backward(){
 
-  unsigned int i;
+	unsigned int i;
 
-  for(i=0 ; i<2 ; i++){
-	  servo_der_pie.write(120);
-	  delay(100);
-	  servo_der_rod.write(110);
-	  servo_izq_rod.write(110);
-	  delay(100);
-	  servo_der_pie.write(90);
-	  delay(100);
-	  servo_izq_pie.write(120);
-	  delay(100);
-	  servo_der_rod.write(70);
-	  servo_izq_rod.write(70);
-	  delay(100);
-	  servo_izq_pie.write(90);
-	  delay(100);
+	Serial.println("Ejecutando walk backward.");
+
+	for(i=0 ; i<2 ; i++){
+		servo_der_pie.write(120);
+		delay(100);
+		servo_der_rod.write(110);
+		servo_izq_rod.write(110);
+		delay(100);
+		servo_der_pie.write(90);
+		delay(100);
+		servo_izq_pie.write(120);
+		delay(100);
+		servo_der_rod.write(70);
+		servo_izq_rod.write(70);
+		delay(100);
+		servo_izq_pie.write(90);
+		delay(100);
 	}
-  servo_der_rod.write(90);
-  servo_izq_rod.write(90);
-  
+	servo_der_rod.write(90);
+	servo_izq_rod.write(90);
+
 }
 
 
 
 void turn_left(){
-  
-  unsigned int i;
-  for(i=0 ; i<2 ; i++){
-	  servo_der_pie.write(120);
-	  delay(100);
-	  servo_der_rod.write(70);
-	  servo_izq_rod.write(90);
-	  delay(100);
-	  servo_der_pie.write(90);
-	  delay(100);
-	  servo_izq_pie.write(60);
-	  delay(100);
-	  servo_der_rod.write(110);
-	  servo_izq_rod.write(90);
-	  delay(100);
-	  servo_izq_pie.write(90);
-	  delay(100);
 
-  }
-  servo_der_rod.write(90);
-  servo_izq_rod.write(90);
-  
+	unsigned int i;
+
+	Serial.println("Ejecutando turn left.");
+
+	for(i=0 ; i<2 ; i++){
+		servo_der_pie.write(120);
+		delay(100);
+		servo_der_rod.write(70);
+		servo_izq_rod.write(90);
+		delay(100);
+		servo_der_pie.write(90);
+		delay(100);
+		servo_izq_pie.write(60);
+		delay(100);
+		servo_der_rod.write(110);
+		servo_izq_rod.write(90);
+		delay(100);
+		servo_izq_pie.write(90);
+		delay(100);
+	}
+	servo_der_rod.write(90);
+	servo_izq_rod.write(90);
+
 }
 
 
@@ -123,6 +128,9 @@ void turn_left(){
 void turn_right(){
 
 	unsigned int i;
+
+	Serial.println("Ejecutando turn right.");
+
 	for(i=0; i<2; i++){
 		servo_der_pie.write(120);
 		delay(100);
@@ -147,6 +155,8 @@ void turn_right(){
 void moonwalk(){
 
 	unsigned int i;
+
+	Serial.println("Ejecutando moonwalk.");
 
 	//hacia un lado
 	for(i=0 ; i<2 ; i++){
@@ -177,13 +187,15 @@ void moonwalk(){
 
 
 void bend(){
-  
+
+	Serial.println("Ejecutando bend.");
+
 	servo_der_pie.write(135);
 	delay(250);
 	servo_der_pie.write(90);
 	delay(1000);
 	servo_izq_pie.write(45);
-  	delay(250);
+	delay(250);
 	servo_izq_pie.write(90);
 
 }
@@ -192,23 +204,25 @@ void bend(){
 
 void shake_leg(){
 
-  servo_der_pie.write(115);
-  delay(70);
-  servo_der_pie.write(140);
-  delay(200);
-  servo_izq_pie.write(110);
-  servo_der_pie.write(120);
-  delay(200);
-  servo_der_pie.write(70);
-  delay(70);
-  servo_der_pie.write(110);
-  delay(70);
-  servo_der_pie.write(70);
-  delay(70);
-  servo_der_pie.write(130);
-  delay(70);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(90);
+	Serial.println("Ejecutando shake leg.");
+
+	servo_der_pie.write(115);
+	delay(70);
+	servo_der_pie.write(140);
+	delay(200);
+	servo_izq_pie.write(110);
+	servo_der_pie.write(120);
+	delay(200);
+	servo_der_pie.write(70);
+	delay(70);
+	servo_der_pie.write(110);
+	delay(70);
+	servo_der_pie.write(70);
+	delay(70);
+	servo_der_pie.write(130);
+	delay(70);
+	servo_der_pie.write(90);
+	servo_izq_pie.write(90);
 
 }
 
@@ -216,46 +230,36 @@ void shake_leg(){
 
 void crusaito(){
 
-  servo_der_rod.write(70);
-  delay(200);
-  servo_der_pie.write(115);
-  delay(200);
-  servo_der_rod.write(90);
-  delay(200);
-  servo_der_rod.write(110);
-  servo_izq_rod.write(110);
-  delay(200);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(65);
-  delay(200);
-  servo_der_rod.write(90);
-  servo_izq_rod.write(90);
-  delay(200);
-  servo_der_rod.write(70);
-  servo_izq_rod.write(70);
-  delay(200);
-  servo_der_pie.write(115);
-  servo_izq_pie.write(90);
-  delay(200);
-  servo_der_rod.write(90);
-  servo_izq_rod.write(90);
-  delay(200);
-  servo_der_rod.write(110);
-  servo_izq_rod.write(110);
-  delay(200);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(65);
-  delay(200);
-  servo_der_rod.write(90);
-  servo_izq_rod.write(90);
-  delay(200);
-  servo_der_rod.write(70);
-  servo_izq_rod.write(70);
-  delay(200);
-  servo_izq_pie.write(90);
-  delay(200);
-  servo_der_rod.write(90);
-  servo_izq_rod.write(90);
+	unsigned int i;
+
+	Serial.println("Ejecutando crusaito.");
+
+	servo_der_rod.write(70);
+	delay(200);
+	for(i=0 ; i<2 ; i++){
+		servo_der_pie.write(115);
+		servo_izq_pie.write(90);
+		delay(200);
+		servo_der_rod.write(90);
+		servo_izq_rod.write(90);
+		delay(200);
+		servo_der_rod.write(110);
+		servo_izq_rod.write(110);
+		delay(200);
+		servo_der_pie.write(90);
+		servo_izq_pie.write(65);
+		delay(200);
+		servo_der_rod.write(90);
+		servo_izq_rod.write(90);
+		delay(200);
+		servo_der_rod.write(70);
+		servo_izq_rod.write(70);
+		delay(200);
+	}
+	servo_izq_pie.write(90);
+	delay(200);
+	servo_der_rod.write(90);
+	servo_izq_rod.write(90);
 
 }
 
@@ -264,79 +268,81 @@ void crusaito(){
 void flapping(){
 
 	unsigned int i;
+
+	Serial.println("Ejecutando flapping.");
+
 	//hacia un lado
 	//subir
-	for(i=1 ; i<=3 ; i++){
-		servo_der_pie.write(90+(i*10));
-		servo_izq_pie.write(90-(i*10));
-		servo_der_rod.write(90+(i*5));
-		servo_izq_rod.write(90-(i*5));
-		delay(200);
+
+	for(i=1 ; i<=15 ; i++){
+		servo_der_pie.write(90+(i*2));
+		servo_izq_pie.write(90-(i*2));
+		servo_der_rod.write(90+i);
+		servo_izq_rod.write(90-i);
+		delay(40);
 	}
 
-
-	for(i=1 ; i<=3 ; i++){
-		servo_der_pie.write(120+i*5);
-		servo_izq_pie.write(60-i*5);
-		servo_der_rod.write(105-i*5);
-		servo_izq_rod.write(75+i*5);
-		delay(200);
+	for(i=1 ; i<=15 ; i++){
+		servo_der_pie.write(120+i);
+		servo_izq_pie.write(60-i);
+		servo_der_rod.write(105-i);
+		servo_izq_rod.write(75+i);
+		delay(40);
 	}
 
+	//bajar
 
-  //bajar
-	for(i=1; i<=3; i++){
-
-		servo_der_pie.write(135-i*5);
-	  	servo_izq_pie.write(45+i*5);
-  		servo_der_rod.write(90+i*5);
-	  	servo_izq_rod.write(90-i*5);
-	  	delay(200);
+	for(i=1; i<=15; i++){
+		servo_der_pie.write(135-i);
+		servo_izq_pie.write(45+i);
+		servo_der_rod.write(90+i);
+		servo_izq_rod.write(90-i);
+		delay(40);
 	}
 
-
-
-for(i=1; i<=3; i++){
-  servo_der_pie.write(120-i*10);
-  servo_izq_pie.write(60+i*10);
-  servo_der_rod.write(105-i*5);
-  servo_izq_rod.write(75+i*5);
-}
-
+	for(i=1; i<=15; i++){
+		servo_der_pie.write(120-i*2);
+		servo_izq_pie.write(60+i*2);
+		servo_der_rod.write(105-i);
+		servo_izq_rod.write(75+i);
+		delay(40);
+	}
 
 	//hacia el otro
 	//subir
-	for (i = 1; i<=3; i++)
-	{
-		servo_der_pie.write(90+i*10);
-		servo_izq_pie.write(90-i*10);
-		servo_der_rod.write(90+i*5);
-		servo_izq_rod.write(90-i*5);
+
+	for (i = 1; i<=15; i++){
+		servo_der_pie.write(90+i*2);
+		servo_izq_pie.write(90-i*2);
+		servo_der_rod.write(90+i);
+		servo_izq_rod.write(90-i);
+		delay(40);
 	}
 
-	for (i = 1; i<=3; i++)
-	{
-		servo_der_pie.write(120+i*5);
-		servo_izq_pie.write(60-i*5);
-		servo_der_rod.write(105-i*5);
-		servo_izq_rod.write(75+i*5);
+	for (i = 1; i<=15; i++){
+		servo_der_pie.write(120+i);
+		servo_izq_pie.write(60-i);
+		servo_der_rod.write(105-i);
+		servo_izq_rod.write(75+i);
+		delay(40);
 	}
 
-//bajar
-	for (i = 1; i<=3; i++)
-	{
-		servo_der_pie.write(135-i*5);
-		servo_izq_pie.write(45+i*5);
-		servo_der_rod.write(90+i*5);
-		servo_izq_rod.write(90-i*5);
+	//bajar
+
+	for (i = 1; i<=15; i++){
+		servo_der_pie.write(135-i);
+		servo_izq_pie.write(45+i);
+		servo_der_rod.write(90+i);
+		servo_izq_rod.write(90-i);
+		delay(40);
 	}
 
-	for (i = 1; i<=3; i++)
-	{
-		servo_der_pie.write(120-i*10);
-		servo_izq_pie.write(60+i*10);
-		servo_der_rod.write(105-i*5);
-		servo_izq_rod.write(75+i*5);
+	for (i = 1; i<=15; i++){
+		servo_der_pie.write(120-i*2);
+		servo_izq_pie.write(60+i*2);
+		servo_der_rod.write(105-i);
+		servo_izq_rod.write(75+i);
+		delay(40);
 	}
 
 }
@@ -346,6 +352,8 @@ for(i=1; i<=3; i++){
 void swing(){
 
 	unsigned int j;
+
+	Serial.println("Ejecutando swing.");
 
 	servo_izq_pie.write(70);
 	delay(100);
@@ -367,22 +375,22 @@ void swing(){
 		delay(200);
 	}
 
-  servo_der_pie.write(130);
-  servo_izq_pie.write(50);
-  delay(200);
-  servo_der_pie.write(160);
-  servo_izq_pie.write(70);
-  delay(200);
-  servo_der_pie.write(130);
-  servo_izq_pie.write(50);
-  delay(200);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(30);
-  delay(200);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(90);
-  delay(200);
-  
+	servo_der_pie.write(130);
+	servo_izq_pie.write(50);
+	delay(200);
+	servo_der_pie.write(160);
+	servo_izq_pie.write(70);
+	delay(200);
+	servo_der_pie.write(130);
+	servo_izq_pie.write(50);
+	delay(200);
+	servo_der_pie.write(90);
+	servo_izq_pie.write(30);
+	delay(200);
+	servo_der_pie.write(90);
+	servo_izq_pie.write(90);
+	delay(200);
+
 }
 
 
@@ -390,6 +398,9 @@ void swing(){
 void tiptoe_swing(){
 
 	unsigned int i;
+
+	Serial.println("Ejecutando tiptoe swing.");
+
 	//mover rodillas 2 veces
 	for(i=1; i<=2; i++){
 		servo_izq_rod.write(70);
@@ -407,15 +418,15 @@ void tiptoe_swing(){
 	}
 
   //mover pies
-	for(i=1; i<=2; i++){
-		servo_izq_pie.write(90-i*20);
-		servo_der_pie.write(90+i*20);
-		delay(200);
+	for(i=1 ; i<=40 ; i++){
+		servo_izq_pie.write(90-i);
+		servo_der_pie.write(90+i);
+		delay(10);
 	}
-	for(i=1; i<=2; i++){
-		servo_izq_pie.write(50+i*20);
-		servo_der_pie.write(130-i*20);
-		delay(200);
+	for(i=1; i<=40; i++){
+		servo_izq_pie.write(50+i);
+		servo_der_pie.write(130-i);
+		delay(10);
 	}
   
 }
@@ -424,60 +435,61 @@ void tiptoe_swing(){
 
 void jitter(){
 
-	//1
-  servo_der_pie.write(105);
-  servo_izq_pie.write(75);
-  delay(200);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(60);
-  delay(200);
-  servo_izq_pie.write(75);
-  delay(200);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(90);
-  delay(200);
-  //2
+	Serial.println("Ejecutando jitter.");
 
-  servo_der_pie.write(105);
-  servo_izq_pie.write(75);
-  servo_izq_rod.write(95);
-  servo_der_rod.write(85);
-  delay(200);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(60);
-  servo_izq_rod.write(100);
-  servo_der_rod.write(80);
-  delay(200);
-  servo_izq_pie.write(75);
-  servo_izq_rod.write(95);
-  servo_der_rod.write(85);
-  delay(200);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(90);
-  servo_izq_rod.write(90);
-  servo_der_rod.write(90);
-  delay(200);
-  //3
-  servo_der_pie.write(105);
-  servo_izq_pie.write(75);
-  servo_izq_rod.write(97);
-  servo_der_rod.write(83);
-  delay(200);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(60);
-  servo_izq_rod.write(105);
-  servo_der_rod.write(75);
-  delay(200);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(75);
-  servo_izq_rod.write(97);
-  servo_der_rod.write(83);
-  delay(200);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(90);
-  servo_izq_rod.write(90);
-  servo_der_rod.write(90);
-  delay(200);
+	//1
+	servo_der_pie.write(105);
+	servo_izq_pie.write(75);
+	delay(200);
+	servo_der_pie.write(120);
+	servo_izq_pie.write(60);
+	delay(200);
+	servo_izq_pie.write(75);
+	delay(200);
+	servo_der_pie.write(90);
+	servo_izq_pie.write(90);
+	delay(200);
+	//2
+	servo_der_pie.write(105);
+	servo_izq_pie.write(75);
+	servo_izq_rod.write(95);
+	servo_der_rod.write(85);
+	delay(200);
+	servo_der_pie.write(120);
+	servo_izq_pie.write(60);
+	servo_izq_rod.write(100);
+	servo_der_rod.write(80);
+	delay(200);
+	servo_izq_pie.write(75);
+	servo_izq_rod.write(95);
+	servo_der_rod.write(85);
+	delay(200);
+	servo_der_pie.write(90);
+	servo_izq_pie.write(90);
+	servo_izq_rod.write(90);
+	servo_der_rod.write(90);
+	delay(200);
+	//3
+	servo_der_pie.write(105);
+	servo_izq_pie.write(75);
+	servo_izq_rod.write(97);
+	servo_der_rod.write(83);
+	delay(200);
+	servo_der_pie.write(120);
+	servo_izq_pie.write(60);
+	servo_izq_rod.write(105);
+	servo_der_rod.write(75);
+	delay(200);
+	servo_der_pie.write(120);
+	servo_izq_pie.write(75);
+	servo_izq_rod.write(97);
+	servo_der_rod.write(83);
+	delay(200);
+	servo_der_pie.write(90);
+	servo_izq_pie.write(90);
+	servo_izq_rod.write(90);
+	servo_der_rod.write(90);
+	delay(200);
 
 }
 
@@ -487,10 +499,12 @@ void up_down(){
 
 	unsigned int i;
 
-	for(i=1 ; i<=6 ; i++){
-		servo_der_pie.write(90+i*5);
-		servo_izq_pie.write(90-i*5);
-		delay(20+i*5);
+	Serial.println("Ejecutando up down.");
+
+	for(i=1 ; i<=30 ; i++){
+		servo_der_pie.write(90+i);
+		servo_izq_pie.write(90-i);
+		delay(20+i);
 	}
 
 	for(i=1 ; i<=3 ; i++){
@@ -511,10 +525,10 @@ void up_down(){
 		delay(70-i*5);
 	}
 
-	for(i=0 ; i<7 ; i++){
-		servo_der_pie.write(125-i*5);
-		servo_izq_pie.write(45+i*5);
-		delay(55-i*5);
+	for(i=0 ; i<35 ; i++){
+		servo_der_pie.write(125-i);
+		servo_izq_pie.write(45+i);
+		delay(55-i);
 	}
 
 	servo_der_rod.write(90);
@@ -530,22 +544,24 @@ void happy(){
 
 	unsigned int i;
 
-	for(i=1 ; i<=5 ; i++){
-		servo_der_pie.write(90-i*4);
-		servo_izq_pie.write(90-i*8);
-		delay(70);
+	Serial.println("Ejecutando happy.");
+
+	for(i=1 ; i<=20 ; i++){
+		servo_der_pie.write(90-i);
+		servo_izq_pie.write(90-i*2);
+		delay(18);
 	}
 
-	for(i=1 ; i<=5 ; i++){
-		servo_der_pie.write(70+i*12);
-		servo_izq_pie.write(50+i*12);
-		delay(70);
+	for(i=1 ; i<=60 ; i++){
+		servo_der_pie.write(70+i);
+		servo_izq_pie.write(50+i);
+		delay(6);
 	}
 
-	for(i=1 ; i<=3 ; i++){
-		servo_der_pie.write(122-i*4);
-		servo_izq_pie.write(110-i*10);
-		delay(70);
+	for(i=1 ; i<=6 ; i++){
+		servo_der_pie.write(122-i*2);
+		servo_izq_pie.write(110-i*5);
+		delay(35);
 	}
 
 	servo_der_pie.write(90);
@@ -557,30 +573,32 @@ void happy(){
 
 void super_happy(){
 
-  servo_der_pie.write(120);
-  servo_izq_pie.write(75);
-  delay(250);
-  servo_der_pie.write(105);
-  servo_izq_pie.write(60);
-  delay(100);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(75);
-  delay(100);
-  servo_der_pie.write(105);
-  servo_izq_pie.write(60);
-  delay(250);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(75);
-  delay(100);
-  servo_der_pie.write(105);
-  servo_izq_pie.write(60);
-  delay(100);
-  servo_der_pie.write(120);
-  servo_izq_pie.write(75);
-  delay(250);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(90);
-  
+	Serial.println("Ejecutando super happy.");
+
+	servo_der_pie.write(120);
+	servo_izq_pie.write(75);
+	delay(250);
+	servo_der_pie.write(105);
+	servo_izq_pie.write(60);
+	delay(100);
+	servo_der_pie.write(120);
+	servo_izq_pie.write(75);
+	delay(100);
+	servo_der_pie.write(105);
+	servo_izq_pie.write(60);
+	delay(250);
+	servo_der_pie.write(120);
+	servo_izq_pie.write(75);
+	delay(100);
+	servo_der_pie.write(105);
+	servo_izq_pie.write(60);
+	delay(100);
+	servo_der_pie.write(120);
+	servo_izq_pie.write(75);
+	delay(250);
+	servo_der_pie.write(90);
+	servo_izq_pie.write(90);
+
 }
 
 
@@ -588,6 +606,8 @@ void super_happy(){
 void sad(){
 
 	unsigned int i;
+
+	Serial.println("Ejecutando sad.");
 
 	for(i=1 ; i<=5 ; i++){
 		servo_der_rod.write(90-i*2);
@@ -613,10 +633,12 @@ void victory(){
 
 	unsigned int i;
 
-	for(i=1; i<=6;i++){
-		servo_der_pie.write(90+i*5);
-		servo_izq_pie.write(90-i*5);
-		delay(25+i*5);
+	Serial.println("Ejecutando victory.");
+
+	for(i=1; i<=30;i++){
+		servo_der_pie.write(90+i);
+		servo_izq_pie.write(90-i);
+		delay(25+i);
 	}
 
  	for(i=1; i<3; i++){
@@ -674,23 +696,25 @@ void angry(){
 
 	unsigned int i, j;
 
-	for(i=0 ; i<2 ; i++){
+	Serial.println("Ejecutando angry.");
+
+	for(i=0 ; i<20 ; i++){
 		for(j=1; j<=2 ; j++){
-			servo_izq_rod.write(90-j*10);
-			servo_der_rod.write(90-j*10);
-			delay(100);
+			servo_izq_rod.write(90-j);
+			servo_der_rod.write(90-j);
+			delay(10);
 		}
 		delay(200);
-		for(j=1; j<=4 ; j++){
-			servo_izq_rod.write(70+j*10);
-			servo_der_rod.write(70+j*10);
-			delay(100);
+		for(j=1; j<=40 ; j++){
+			servo_izq_rod.write(70+j);
+			servo_der_rod.write(70+j);
+			delay(10);
 		}
 		delay(200);
-		for(j=1 ; j<=2 ; j++){
-			servo_izq_rod.write(110-j*10);
-			servo_der_rod.write(110-j*10);
-			delay(100);
+		for(j=1 ; j<=20 ; j++){
+			servo_izq_rod.write(110-j);
+			servo_der_rod.write(110-j);
+			delay(10);
 		}
 	}
 	delay(300);
@@ -706,41 +730,47 @@ void angry(){
 
 void sleeping(){
 
-  servo_der_pie.write(75);
-  servo_izq_pie.write(105);
-  delay(500);
-  servo_izq_pie.write(115);
-  delay(3000);
-  servo_der_pie.write(90);
-  servo_izq_pie.write(90);
+	Serial.println("Ejecutando sleeping.");
+
+	servo_der_pie.write(75);
+	servo_izq_pie.write(105);
+	delay(500);
+	servo_izq_pie.write(115);
+	delay(3000);
+	servo_der_pie.write(90);
+	servo_izq_pie.write(90);
   
 }
 
 
 
 void fretful(){
-  
-  servo_der_pie.write(105);
-  delay(100);
-  servo_der_pie.write(90);
-  delay(900);
-  servo_der_pie.write(110);
-  delay(100);
-  servo_der_pie.write(90);
-  delay(800);
-  servo_der_pie.write(100);
-  delay(100);
-  servo_der_pie.write(90);
-  delay(9000);
-  servo_der_pie.write(110);
-  delay(100);
-  servo_der_pie.write(90);
-  
+
+	Serial.println("Ejecutando fretful.");
+
+	servo_der_pie.write(105);
+	delay(100);
+	servo_der_pie.write(90);
+	delay(900);
+	servo_der_pie.write(110);
+	delay(100);
+	servo_der_pie.write(90);
+	delay(800);
+	servo_der_pie.write(100);
+	delay(100);
+	servo_der_pie.write(90);
+	delay(9000);
+	servo_der_pie.write(110);
+	delay(100);
+	servo_der_pie.write(90);
+
 }
 
 
 
 void love(){
+
+	Serial.println("Ejecutando love.");
 
 	delay(115);
   servo_izq_pie.write(70);
@@ -821,17 +851,19 @@ void confused(){
   
 	unsigned int i;
 
-	for(i=1 ; i<6 ; i++){
-		servo_izq_rod.write(90+i*5);
-		servo_der_rod.write(90-i*5);
-		delay(150);
+	Serial.println("Ejecutando confused.");
+
+	for(i=1 ; i<30 ; i++){
+		servo_izq_rod.write(90+i);
+		servo_der_rod.write(90-i);
+		delay(30);
 	}
 	delay(650);
 
-	for(i=1 ; i<6 ; i++){
-		servo_izq_rod.write(120-i*5);
-		servo_der_rod.write(60+i*5);
-		delay(150);
+	for(i=1 ; i<30 ; i++){
+		servo_izq_rod.write(120-i);
+		servo_der_rod.write(60+i);
+		delay(30);
 	}
 	delay(650);
 
@@ -840,6 +872,8 @@ void confused(){
 
 
 void fart(){
+
+	Serial.println("Ejecutando fart.");
   
   servo_izq_pie.write(80);
   servo_der_pie.write(100);
@@ -856,6 +890,8 @@ void fart(){
 
 
 void fail(){
+
+	Serial.println("Ejecutando fail.");
 
   servo_der_pie.write(130);
   delay(200);
@@ -924,72 +960,105 @@ bool ultrasonido(){
 
 void setup() {
 
-  //serial para debug
-  //Serial.begin(9600);
+	//serial para debug
+	Serial.begin(9600);
 
-  WiFi.softAP("OTTO", "12345678");
-  delay(500);
-  server.on("/walk_forward", walk_forward);
-  server.on("/walk_backward", walk_backward);
-  server.on("/turn_left", turn_left);
-  server.on("/turn_right", turn_right);
-  server.on("/moonwalk", moonwalk);
-  server.on("/bend", bend);
-  server.on("/shake_leg", shake_leg);
-  server.on("/crusaito", crusaito);
-  server.on("/flapping", flapping);
-  server.on("/swing", swing);
-  server.on("/tiptoe_swing", tiptoe_swing);
-  server.on("/jitter", jitter);
-  server.on("/up_down", up_down);
-  server.on("/happy", happy);
-  server.on("/super_happy", super_happy);
-  server.on("/sad", sad);
-  server.on("/victory", victory);
-  server.on("/angry", angry);
-  server.on("/sleeping", sleeping);
-  server.on("/fretful", fretful);
-  server.on("/love", love);
-  server.on("/confused", confused);
-  server.on("/fart", fart);
-  server.on("/fail", fail);
+	WiFi.softAP("OTTO", "12345678");
+	delay(500);
+	server.on("/walk_forward", walk_forward);
+	server.on("/walk_backward", walk_backward);
+	server.on("/turn_left", turn_left);
+	server.on("/turn_right", turn_right);
+	server.on("/moonwalk", moonwalk);
+	server.on("/bend", bend);
+	server.on("/shake_leg", shake_leg);
+	server.on("/crusaito", crusaito);
+	server.on("/flapping", flapping);
+	server.on("/swing", swing);
+	server.on("/tiptoe_swing", tiptoe_swing);
+	server.on("/jitter", jitter);
+	server.on("/up_down", up_down);
+	server.on("/happy", happy);
+	server.on("/super_happy", super_happy);
+	server.on("/sad", sad);
+	server.on("/victory", victory);
+	server.on("/angry", angry);
+	server.on("/sleeping", sleeping);
+	server.on("/fretful", fretful);
+	server.on("/love", love);
+	server.on("/confused", confused);
+	server.on("/fart", fart);
+	server.on("/fail", fail);
 
-  server.on("/ultrasonido_on", ultrasonido_on);
-  server.on("/ultrasonido_off", ultrasonido_off);
+	server.on("/ultrasonido_on", ultrasonido_on);
+	server.on("/ultrasonido_off", ultrasonido_off);
 
-  server.begin();
+	server.begin();
 
-  //config servos
-  servo_der_pie.attach(GPIO_SERVO1);
-  servo_der_rod.attach(GPIO_SERVO2);
-  servo_izq_pie.attach(GPIO_SERVO3);
-  servo_izq_rod.attach(GPIO_SERVO4);
+	//config servos
+	servo_der_pie.attach(GPIO_SERVO1);
+	servo_der_rod.attach(GPIO_SERVO2);
+	servo_izq_pie.attach(GPIO_SERVO3);
+	servo_izq_rod.attach(GPIO_SERVO4);
 
-  //set pos inicial
-  servo_izq_rod.write(90);
-  servo_der_pie.write(90);
-  servo_der_rod.write(90);
-  servo_izq_pie.write(90);
+	//set pos inicial
+	servo_izq_rod.write(90);
+	servo_der_pie.write(90);
+	servo_der_rod.write(90);
+	servo_izq_pie.write(90);
 
-  //iniciar sensor ultrasonido
-  pinMode(GPIO_TRIGGER, OUTPUT); // Sets the trigPin as an Output
-  pinMode(GPIO_ECHO, INPUT); // Sets the echoPin as an Input
-  digitalWrite(GPIO_TRIGGER, LOW);
+	//iniciar sensor ultrasonido
+	pinMode(GPIO_TRIGGER, OUTPUT); // Sets the trigPin as an Output
+	pinMode(GPIO_ECHO, INPUT); // Sets the echoPin as an Input
+	digitalWrite(GPIO_TRIGGER, LOW);
 
-  //led on
-  //pinMode(LED_BUILTIN, OUTPUT); // Sets the echoPin as an Input
-  //digitalWrite(LED_BUILTIN, LOW);
+	//led on
+	//pinMode(LED_BUILTIN, OUTPUT); // Sets the echoPin as an Input
+	//digitalWrite(LED_BUILTIN, LOW);
+
+
+
+	//ejecutar todas las rutinas una vez
+	walk_forward();
+	walk_backward();
+	turn_left();
+	turn_right();
+	moonwalk();
+	bend();
+	shake_leg();
+	crusaito();
+	flapping();
+	swing();
+	tiptoe_swing();
+	jitter();
+	up_down();
+	happy();
+	super_happy();
+	sad();
+	victory();
+	angry();
+	sleeping();
+	fretful();
+	love();
+	confused();
+	fart();
+	fail();
+
+
+
 
 }
 
 void loop() {
 
-  server.handleClient();
-  delay(100);
-  if(ultrasonido_state){
-    if(ultrasonido()){
-    	walk_forward();
-    }
-  }
+	server.handleClient();
+	//delay(100);
+	if(ultrasonido_state){
+		if(!ultrasonido()){
+			walk_forward();
+		}else{
+			walk_backward();
+		}
+	}
 
 }
