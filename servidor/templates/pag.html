@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <title>OTTO - Robot interactivo</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}"/>
+	<link rel="icon" href="{{ url_for('static', filename='images/robot-solid.svg') }}" />
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
     <script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
   </head>
@@ -136,6 +137,12 @@
       </li>
       <li class="nav-item">
         <a class="nav-link text-white" href="https://www.palletsprojects.com/p/flask/" target="_blank"><image src="{{ url_for('static', filename='images/flask') }}" style="height: 32px;object-fit: cover">Flask</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="https://2.python-requests.org/en/master/" target="_blank"><image src="{{ url_for('static', filename='images/requests-logo.png') }}" style="height: 32px;object-fit: cover">Requests</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="https://jquery.com/" target="_blank"><image src="{{ url_for('static', filename='images/jquery.ico') }}" style="height: 32px;object-fit: cover">jQuery</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-white" href="https://getbootstrap.com/" target="_blank"><image src="{{ url_for('static', filename='images/bootstrap.png') }}" style="height: 32px;object-fit: cover">Bootstrap</a>

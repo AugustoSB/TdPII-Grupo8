@@ -698,7 +698,7 @@ void angry(){
 
 	Serial.println("Ejecutando angry.");
 
-	for(i=0 ; i<20 ; i++){
+	for(i=0 ; i<2 ; i++){
 		for(j=1; j<=2 ; j++){
 			servo_izq_rod.write(90-j);
 			servo_der_rod.write(90-j);
@@ -1052,10 +1052,10 @@ void setup() {
 void loop() {
 
 	server.handleClient();
-	//delay(100);
+	delay(100);
 	if(ultrasonido_state){
 		if(!ultrasonido()){
-			walk_forward();
+			//walk_forward();
 		}else{
 			walk_backward();
 		}
