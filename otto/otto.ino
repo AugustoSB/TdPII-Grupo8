@@ -29,6 +29,7 @@ Servo servo_der_rod;
 Servo servo_izq_pie;
 Servo servo_izq_rod;
 bool ultrasonido_state = false;
+unsigned char velocidad = 1;
 
 
 
@@ -46,19 +47,19 @@ void walk_forward(){
 
 	for(i=0 ; i<2 ; i++){
 		servo_der_pie.write(120);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_rod.write(70);
 		servo_izq_rod.write(70);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_pie.write(90);
-		delay(100);
+		delay(velocidad*100);
 		servo_izq_pie.write(120);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_rod.write(110);
 		servo_izq_rod.write(110);
-		delay(100);
+		delay(velocidad*100);
 		servo_izq_pie.write(90);
-		delay(100);
+		delay(velocidad*100);
 	}
 	servo_der_rod.write(90);
 	servo_izq_rod.write(90);
@@ -75,19 +76,19 @@ void walk_backward(){
 
 	for(i=0 ; i<2 ; i++){
 		servo_der_pie.write(120);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_rod.write(110);
 		servo_izq_rod.write(110);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_pie.write(90);
-		delay(100);
+		delay(velocidad*100);
 		servo_izq_pie.write(120);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_rod.write(70);
 		servo_izq_rod.write(70);
-		delay(100);
+		delay(velocidad*100);
 		servo_izq_pie.write(90);
-		delay(100);
+		delay(velocidad*100);
 	}
 	servo_der_rod.write(90);
 	servo_izq_rod.write(90);
@@ -104,19 +105,19 @@ void turn_left(){
 
 	for(i=0 ; i<2 ; i++){
 		servo_der_pie.write(120);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_rod.write(70);
 		servo_izq_rod.write(90);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_pie.write(90);
-		delay(100);
+		delay(velocidad*100);
 		servo_izq_pie.write(60);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_rod.write(110);
 		servo_izq_rod.write(90);
-		delay(100);
+		delay(velocidad*100);
 		servo_izq_pie.write(90);
-		delay(100);
+		delay(velocidad*100);
 	}
 	servo_der_rod.write(90);
 	servo_izq_rod.write(90);
@@ -133,17 +134,17 @@ void turn_right(){
 
 	for(i=0; i<2; i++){
 		servo_der_pie.write(120);
-		delay(100);
+		delay(velocidad*100);
 		servo_izq_rod.write(70);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_pie.write(90);
-		delay(100);
+		delay(velocidad*100);
 		servo_izq_pie.write(120);
-		delay(100);
+		delay(velocidad*100);
 		servo_izq_rod.write(110);
-		delay(100);
+		delay(velocidad*100);
 		servo_izq_pie.write(90);
-		delay(100);
+		delay(velocidad*100);
 	}
 	servo_der_rod.write(90);
 	servo_izq_rod.write(90);
@@ -161,25 +162,25 @@ void moonwalk(){
 	//hacia un lado
 	for(i=0 ; i<2 ; i++){
 		servo_der_pie.write(135);
-		delay(250);
+		delay(velocidad*250);
 		servo_izq_pie.write(45);
-		delay(250);
+		delay(velocidad*250);
 		servo_der_pie.write(90);
-		delay(250);
+		delay(velocidad*250);
 		servo_izq_pie.write(90);
-		delay(250);
+		delay(velocidad*250);
 	}
-	delay(750);
+	delay(velocidad*750);
 	//hacia el otro
 	for(i=0 ; i<2 ; i++){
 		servo_izq_pie.write(45);
-		delay(250);
+		delay(velocidad*250);
 		servo_der_pie.write(135);
-		delay(250);
+		delay(velocidad*250);
 		servo_izq_pie.write(90);
-		delay(250);
+		delay(velocidad*250);
 		servo_der_pie.write(90);
-		delay(250);
+		delay(velocidad*250);
 	}
 
 }
@@ -191,11 +192,11 @@ void bend(){
 	Serial.println("Ejecutando bend.");
 
 	servo_der_pie.write(135);
-	delay(250);
+	delay(velocidad*250);
 	servo_der_pie.write(90);
-	delay(1000);
+	delay(velocidad*1000);
 	servo_izq_pie.write(45);
-	delay(250);
+	delay(velocidad*250);
 	servo_izq_pie.write(90);
 
 }
@@ -207,20 +208,20 @@ void shake_leg(){
 	Serial.println("Ejecutando shake leg.");
 
 	servo_der_pie.write(115);
-	delay(70);
+	delay(velocidad*70);
 	servo_der_pie.write(140);
-	delay(200);
+	delay(velocidad*200);
 	servo_izq_pie.write(110);
 	servo_der_pie.write(120);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(70);
-	delay(70);
+	delay(velocidad*70);
 	servo_der_pie.write(110);
-	delay(70);
+	delay(velocidad*70);
 	servo_der_pie.write(70);
-	delay(70);
+	delay(velocidad*70);
 	servo_der_pie.write(130);
-	delay(70);
+	delay(velocidad*70);
 	servo_der_pie.write(90);
 	servo_izq_pie.write(90);
 
@@ -235,29 +236,29 @@ void crusaito(){
 	Serial.println("Ejecutando crusaito.");
 
 	servo_der_rod.write(70);
-	delay(200);
+	delay(velocidad*200);
 	for(i=0 ; i<2 ; i++){
 		servo_der_pie.write(115);
 		servo_izq_pie.write(90);
-		delay(200);
+		delay(velocidad*200);
 		servo_der_rod.write(90);
 		servo_izq_rod.write(90);
-		delay(200);
+		delay(velocidad*200);
 		servo_der_rod.write(110);
 		servo_izq_rod.write(110);
-		delay(200);
+		delay(velocidad*200);
 		servo_der_pie.write(90);
 		servo_izq_pie.write(65);
-		delay(200);
+		delay(velocidad*200);
 		servo_der_rod.write(90);
 		servo_izq_rod.write(90);
-		delay(200);
+		delay(velocidad*200);
 		servo_der_rod.write(70);
 		servo_izq_rod.write(70);
-		delay(200);
+		delay(velocidad*200);
 	}
 	servo_izq_pie.write(90);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_rod.write(90);
 	servo_izq_rod.write(90);
 
@@ -279,7 +280,7 @@ void flapping(){
 		servo_izq_pie.write(90-(i*2));
 		servo_der_rod.write(90+i);
 		servo_izq_rod.write(90-i);
-		delay(40);
+		delay(velocidad*40);
 	}
 
 	for(i=1 ; i<=15 ; i++){
@@ -287,7 +288,7 @@ void flapping(){
 		servo_izq_pie.write(60-i);
 		servo_der_rod.write(105-i);
 		servo_izq_rod.write(75+i);
-		delay(40);
+		delay(velocidad*40);
 	}
 
 	//bajar
@@ -297,7 +298,7 @@ void flapping(){
 		servo_izq_pie.write(45+i);
 		servo_der_rod.write(90+i);
 		servo_izq_rod.write(90-i);
-		delay(40);
+		delay(velocidad*40);
 	}
 
 	for(i=1; i<=15; i++){
@@ -305,7 +306,7 @@ void flapping(){
 		servo_izq_pie.write(60+i*2);
 		servo_der_rod.write(105-i);
 		servo_izq_rod.write(75+i);
-		delay(40);
+		delay(velocidad*40);
 	}
 
 	//hacia el otro
@@ -316,7 +317,7 @@ void flapping(){
 		servo_izq_pie.write(90-i*2);
 		servo_der_rod.write(90+i);
 		servo_izq_rod.write(90-i);
-		delay(40);
+		delay(velocidad*40);
 	}
 
 	for (i = 1; i<=15; i++){
@@ -324,7 +325,7 @@ void flapping(){
 		servo_izq_pie.write(60-i);
 		servo_der_rod.write(105-i);
 		servo_izq_rod.write(75+i);
-		delay(40);
+		delay(velocidad*40);
 	}
 
 	//bajar
@@ -334,7 +335,7 @@ void flapping(){
 		servo_izq_pie.write(45+i);
 		servo_der_rod.write(90+i);
 		servo_izq_rod.write(90-i);
-		delay(40);
+		delay(velocidad*40);
 	}
 
 	for (i = 1; i<=15; i++){
@@ -342,7 +343,7 @@ void flapping(){
 		servo_izq_pie.write(60+i*2);
 		servo_der_rod.write(105-i);
 		servo_izq_rod.write(75+i);
-		delay(40);
+		delay(velocidad*40);
 	}
 
 }
@@ -356,40 +357,40 @@ void swing(){
 	Serial.println("Ejecutando swing.");
 
 	servo_izq_pie.write(70);
-	delay(100);
+	delay(velocidad*100);
 	servo_izq_pie.write(50);
-	delay(200);
+	delay(velocidad*200);
 
 	for(j=1; j<=2; j++){
 		servo_der_pie.write(110);
 		servo_izq_pie.write(70);
-		delay(200);
+		delay(velocidad*200);
 		servo_der_pie.write(130);
 		servo_izq_pie.write(90);
-		delay(200);
+		delay(velocidad*200);
 		servo_der_pie.write(110);
 		servo_izq_pie.write(70);
-		delay(200);
+		delay(velocidad*200);
 		servo_der_pie.write(90);
 		servo_izq_pie.write(50);
-		delay(200);
+		delay(velocidad*200);
 	}
 
 	servo_der_pie.write(130);
 	servo_izq_pie.write(50);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(160);
 	servo_izq_pie.write(70);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(130);
 	servo_izq_pie.write(50);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(90);
 	servo_izq_pie.write(30);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(90);
 	servo_izq_pie.write(90);
-	delay(200);
+	delay(velocidad*200);
 
 }
 
@@ -405,30 +406,30 @@ void tiptoe_swing(){
 	for(i=1; i<=2; i++){
 		servo_izq_rod.write(70);
 		servo_der_rod.write(110);
-		delay(150);
+		delay(velocidad*150);
 		servo_izq_rod.write(90);
 		servo_der_rod.write(90);
-		delay(100);
+		delay(velocidad*100);
 		servo_izq_rod.write(110);
 		servo_der_rod.write(70);
-		delay(150);
+		delay(velocidad*150);
 		servo_izq_rod.write(90);
 		servo_der_rod.write(90);
-		delay(100);
+		delay(velocidad*100);
 	}
 
   //mover pies
 	for(i=1 ; i<=40 ; i++){
 		servo_izq_pie.write(90-i);
 		servo_der_pie.write(90+i);
-		delay(10);
+		delay(velocidad*10);
 	}
 	for(i=1; i<=40; i++){
 		servo_izq_pie.write(50+i);
 		servo_der_pie.write(130-i);
-		delay(10);
+		delay(velocidad*10);
 	}
-  
+
 }
 
 
@@ -440,56 +441,56 @@ void jitter(){
 	//1
 	servo_der_pie.write(105);
 	servo_izq_pie.write(75);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(120);
 	servo_izq_pie.write(60);
-	delay(200);
+	delay(velocidad*200);
 	servo_izq_pie.write(75);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(90);
 	servo_izq_pie.write(90);
-	delay(200);
+	delay(velocidad*200);
 	//2
 	servo_der_pie.write(105);
 	servo_izq_pie.write(75);
 	servo_izq_rod.write(95);
 	servo_der_rod.write(85);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(120);
 	servo_izq_pie.write(60);
 	servo_izq_rod.write(100);
 	servo_der_rod.write(80);
-	delay(200);
+	delay(velocidad*200);
 	servo_izq_pie.write(75);
 	servo_izq_rod.write(95);
 	servo_der_rod.write(85);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(90);
 	servo_izq_pie.write(90);
 	servo_izq_rod.write(90);
 	servo_der_rod.write(90);
-	delay(200);
+	delay(velocidad*200);
 	//3
 	servo_der_pie.write(105);
 	servo_izq_pie.write(75);
 	servo_izq_rod.write(97);
 	servo_der_rod.write(83);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(120);
 	servo_izq_pie.write(60);
 	servo_izq_rod.write(105);
 	servo_der_rod.write(75);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(120);
 	servo_izq_pie.write(75);
 	servo_izq_rod.write(97);
 	servo_der_rod.write(83);
-	delay(200);
+	delay(velocidad*200);
 	servo_der_pie.write(90);
 	servo_izq_pie.write(90);
 	servo_izq_rod.write(90);
 	servo_der_rod.write(90);
-	delay(200);
+	delay(velocidad*200);
 
 }
 
@@ -504,7 +505,7 @@ void up_down(){
 	for(i=1 ; i<=30 ; i++){
 		servo_der_pie.write(90+i);
 		servo_izq_pie.write(90-i);
-		delay(20+i);
+		delay((20+i)*velocidad);
 	}
 
 	for(i=1 ; i<=3 ; i++){
@@ -512,23 +513,23 @@ void up_down(){
 		servo_izq_rod.write(90-i*2);
 		servo_der_pie.write(125+i*5);
 		servo_izq_pie.write(45-i*5);
-		delay(55+i*5);
+		delay((55+i*5)*velocidad);
 	}
 
-	delay(30);
+	delay(30*velocidad);
 
 	for(i=1 ; i<=2 ; i++){
 		servo_der_rod.write(96-i*2);
 		servo_izq_rod.write(84+i*2);
 		servo_der_pie.write(140-i*5);
 		servo_izq_pie.write(30+i*5);
-		delay(70-i*5);
+		delay((70-i*5)*velocidad);
 	}
 
 	for(i=0 ; i<35 ; i++){
 		servo_der_pie.write(125-i);
 		servo_izq_pie.write(45+i);
-		delay(55-i);
+		delay((55-i)*velocidad);
 	}
 
 	servo_der_rod.write(90);
@@ -549,19 +550,19 @@ void happy(){
 	for(i=1 ; i<=20 ; i++){
 		servo_der_pie.write(90-i);
 		servo_izq_pie.write(90-i*2);
-		delay(18);
+		delay(18*velocidad);
 	}
 
 	for(i=1 ; i<=60 ; i++){
 		servo_der_pie.write(70+i);
 		servo_izq_pie.write(50+i);
-		delay(6);
+		delay(6*velocidad);
 	}
 
 	for(i=1 ; i<=6 ; i++){
 		servo_der_pie.write(122-i*2);
 		servo_izq_pie.write(110-i*5);
-		delay(35);
+		delay(35*velocidad);
 	}
 
 	servo_der_pie.write(90);
@@ -577,25 +578,25 @@ void super_happy(){
 
 	servo_der_pie.write(120);
 	servo_izq_pie.write(75);
-	delay(250);
+	delay(250*velocidad);
 	servo_der_pie.write(105);
 	servo_izq_pie.write(60);
-	delay(100);
+	delay(100*velocidad);
 	servo_der_pie.write(120);
 	servo_izq_pie.write(75);
-	delay(100);
+	delay(100*velocidad);
 	servo_der_pie.write(105);
 	servo_izq_pie.write(60);
-	delay(250);
+	delay(250*velocidad);
 	servo_der_pie.write(120);
 	servo_izq_pie.write(75);
-	delay(100);
+	delay(100*velocidad);
 	servo_der_pie.write(105);
 	servo_izq_pie.write(60);
-	delay(100);
+	delay(100*velocidad);
 	servo_der_pie.write(120);
 	servo_izq_pie.write(75);
-	delay(250);
+	delay(250*velocidad);
 	servo_der_pie.write(90);
 	servo_izq_pie.write(90);
 
@@ -614,7 +615,7 @@ void sad(){
 		servo_izq_rod.write(90+i*4);
 		servo_der_pie.write(90-i*9);
 		servo_izq_pie.write(90+i*12);
-		delay(55);
+		delay(55*velocidad);
 	}
 	delay(4000);
 	for(i=1 ; i<=5 ; i++){
@@ -622,7 +623,7 @@ void sad(){
 		servo_izq_rod.write(110-i*4);
 		servo_der_pie.write(45+i*9);
 		servo_izq_pie.write(150-i*12);
-		delay(55);
+		delay(55*velocidad);
 	}
 
 }
@@ -638,7 +639,7 @@ void victory(){
 	for(i=1; i<=30;i++){
 		servo_der_pie.write(90+i);
 		servo_izq_pie.write(90-i);
-		delay(25+i);
+		delay((25+i)*velocidad);
 	}
 
  	for(i=1; i<3; i++){
@@ -646,44 +647,44 @@ void victory(){
 		servo_izq_rod.write(90-i*2);
 		servo_der_pie.write(125+i*5);
 		servo_izq_pie.write(45-i*5);
-		delay(60);
+		delay(60*velocidad);
  	}
 
-	delay(100);
-	
+	delay(100*velocidad);
+
 	for (i = 1; i <= 2; i++){
 		servo_der_rod.write(96-i*2);
 		servo_izq_rod.write(84+i*2);
 		servo_der_pie.write(140-i*5);
 		servo_izq_pie.write(30+i*5);
-		delay(70-i*5);
+		delay((70-i*5)*velocidad);
 	}
 
 	for(i=1; i<8; i++){
 		servo_der_pie.write(130-i*5);
 		servo_izq_pie.write(40+i*5);
-		delay(60-i*4);	
+		delay((60-i*4)*velocidad);
 	}
 
-	delay(100);
+	delay(velocidad*100);
 	servo_izq_pie.write(70);
-	delay(100);
+	delay(velocidad*100);
 	servo_izq_pie.write(50);
-	delay(100);
+	delay(velocidad*100);
 
 	for(i=1; i<=2; i++){
 		servo_der_pie.write(110);
 		servo_izq_pie.write(70);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_pie.write(130);
 		servo_izq_pie.write(90);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_pie.write(110);
 		servo_izq_pie.write(70);
-		delay(100);
+		delay(velocidad*100);
 		servo_der_pie.write(90);
 		servo_izq_pie.write(50);
-		delay(100);
+		delay(velocidad*100);
 	}
 
 	servo_izq_pie.write(90);
@@ -702,25 +703,25 @@ void angry(){
 		for(j=1; j<=2 ; j++){
 			servo_izq_rod.write(90-j);
 			servo_der_rod.write(90-j);
-			delay(10);
+			delay(velocidad*10);
 		}
-		delay(200);
+		delay(velocidad*200);
 		for(j=1; j<=40 ; j++){
 			servo_izq_rod.write(70+j);
 			servo_der_rod.write(70+j);
-			delay(10);
+			delay(velocidad*10);
 		}
-		delay(200);
+		delay(velocidad*200);
 		for(j=1 ; j<=20 ; j++){
 			servo_izq_rod.write(110-j);
 			servo_der_rod.write(110-j);
-			delay(10);
+			delay(velocidad*10);
 		}
 	}
-	delay(300);
+	delay(velocidad*300);
 	servo_izq_pie.write(70);
 	servo_der_pie.write(110);
-	delay(400);
+	delay(velocidad*400);
 	servo_izq_pie.write(90);
 	servo_der_pie.write(90);
 
@@ -734,12 +735,12 @@ void sleeping(){
 
 	servo_der_pie.write(75);
 	servo_izq_pie.write(105);
-	delay(500);
+	delay(velocidad*500);
 	servo_izq_pie.write(115);
-	delay(3000);
+	delay(velocidad*3000);
 	servo_der_pie.write(90);
 	servo_izq_pie.write(90);
-  
+
 }
 
 
@@ -749,19 +750,19 @@ void fretful(){
 	Serial.println("Ejecutando fretful.");
 
 	servo_der_pie.write(105);
-	delay(100);
+	delay(100*velocidad);
 	servo_der_pie.write(90);
-	delay(900);
+	delay(900*velocidad);
 	servo_der_pie.write(110);
-	delay(100);
+	delay(100*velocidad);
 	servo_der_pie.write(90);
-	delay(800);
+	delay(800*velocidad);
 	servo_der_pie.write(100);
-	delay(100);
+	delay(100*velocidad);
 	servo_der_pie.write(90);
-	delay(9000);
+	delay(9000*velocidad);
 	servo_der_pie.write(110);
-	delay(100);
+	delay(100*velocidad);
 	servo_der_pie.write(90);
 
 }
@@ -772,83 +773,83 @@ void love(){
 
 	Serial.println("Ejecutando love.");
 
-	delay(115);
+	delay(115*velocidad);
   servo_izq_pie.write(70);
   servo_der_pie.write(100);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(80);
   servo_der_rod.write(100);
   servo_izq_pie.write(80);
   servo_der_pie.write(110);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(70);
   servo_der_rod.write(110);
   servo_izq_pie.write(90);
   servo_der_pie.write(115);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(80);
   servo_der_rod.write(115);
   servo_izq_pie.write(80);
   servo_der_pie.write(120);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(90);
   servo_der_rod.write(120);
   servo_izq_pie.write(70);
   servo_der_pie.write(115);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(80);
   servo_der_rod.write(115);
   servo_izq_pie.write(80);
   servo_der_pie.write(110);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(70);
   servo_der_rod.write(110);
   servo_izq_pie.write(90);
   servo_der_pie.write(90);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(80);
   servo_der_rod.write(100);
   servo_izq_pie.write(80);
   servo_der_pie.write(100);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(90);
   servo_der_rod.write(110);
   servo_izq_pie.write(70);
   servo_der_pie.write(110);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(80);
   servo_der_rod.write(115);
   servo_izq_pie.write(80);
   servo_der_pie.write(115);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(70);
   servo_der_rod.write(120);
   servo_izq_pie.write(90);
   servo_der_pie.write(120);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(80);
   servo_der_rod.write(115);
   servo_izq_pie.write(80);
   servo_der_pie.write(115);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(90);
   servo_der_rod.write(100);
   servo_izq_pie.write(70);
   servo_der_pie.write(110);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(80);
   servo_izq_pie.write(80);
   servo_der_pie.write(100);
-  delay(115);
+  delay(115*velocidad);
   servo_izq_rod.write(70);
   servo_izq_pie.write(90);
-  servo_der_pie.write(90);  
+  servo_der_pie.write(90);
 }
 
 
 
 void confused(){
-  
+
 	unsigned int i;
 
 	Serial.println("Ejecutando confused.");
@@ -856,16 +857,16 @@ void confused(){
 	for(i=1 ; i<30 ; i++){
 		servo_izq_rod.write(90+i);
 		servo_der_rod.write(90-i);
-		delay(30);
+		delay(30*velocidad);
 	}
-	delay(650);
+	delay(650*velocidad);
 
 	for(i=1 ; i<30 ; i++){
 		servo_izq_rod.write(120-i);
 		servo_der_rod.write(60+i);
-		delay(30);
+		delay(30*velocidad);
 	}
-	delay(650);
+	delay(650*velocidad);
 
 }
 
@@ -874,17 +875,17 @@ void confused(){
 void fart(){
 
 	Serial.println("Ejecutando fart.");
-  
+
   servo_izq_pie.write(80);
   servo_der_pie.write(100);
-  delay(150);
+  delay(150*velocidad);
   servo_der_pie.write(140);
-  delay(2000);
+  delay(2000*velocidad);
   servo_der_pie.write(100);
-  delay(150);
+  delay(150*velocidad);
   servo_izq_pie.write(90);
   servo_der_pie.write(90);
-  
+
 }
 
 
@@ -892,24 +893,62 @@ void fart(){
 void fail(){
 
 	Serial.println("Ejecutando fail.");
-
   servo_der_pie.write(130);
-  delay(200);
+  delay(200*velocidad);
   servo_der_pie.write(170);
-  delay(400);
+  delay(400*velocidad);
   servo_izq_pie.write(100);
-  delay(100);
+  delay(100*velocidad);
   servo_izq_pie.write(110);
-  delay(100);
+  delay(100*velocidad);
   servo_izq_pie.write(120);
-  delay(100);
+  delay(100*velocidad);
   servo_izq_pie.write(130);
-  delay(100);
+  delay(100*velocidad);
   servo_izq_pie.write(140);
-  delay(5000);
+  delay(5000*velocidad);
   servo_izq_pie.write(90);
   servo_der_pie.write(90);
-  
+
+}
+
+
+
+void todas(){
+
+	walk_forward();
+	walk_backward();
+	turn_left();
+	turn_right();
+	moonwalk();
+	bend();
+	shake_leg();
+	crusaito();
+	flapping();
+	swing();
+	tiptoe_swing();
+	jitter();
+	up_down();
+	happy();
+	super_happy();
+	sad();
+	victory();
+	angry();
+	sleeping();
+	fretful();
+	love();
+	confused();
+	fart();
+	fail();
+
+}
+
+void velocidad_rapida(){
+  velocidad = 1;
+}
+
+void velocidad_lenta(){
+  velocidad = 2;
 }
 
 
@@ -993,6 +1032,10 @@ void setup() {
 	server.on("/ultrasonido_on", ultrasonido_on);
 	server.on("/ultrasonido_off", ultrasonido_off);
 
+	server.on("/todas", todas);
+	server.on("/velocidad_lenta", velocidad_lenta);
+	server.on("/velocidad_rapida", velocidad_rapida);
+
 	server.begin();
 
 	//config servos
@@ -1017,32 +1060,7 @@ void setup() {
 	//digitalWrite(LED_BUILTIN, LOW);
 
 
-
 	//ejecutar todas las rutinas una vez
-	walk_forward();
-	walk_backward();
-	turn_left();
-	turn_right();
-	moonwalk();
-	bend();
-	shake_leg();
-	crusaito();
-	flapping();
-	swing();
-	tiptoe_swing();
-	jitter();
-	up_down();
-	happy();
-	super_happy();
-	sad();
-	victory();
-	angry();
-	sleeping();
-	fretful();
-	love();
-	confused();
-	fart();
-	fail();
 
 
 

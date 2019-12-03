@@ -27,13 +27,45 @@ def rutina_walk_backward():
 		pass
 	return '', 204
 
+@app.route('/todas')
+def todas():
+	intentos = 0
+	response = requests.get('http://192.168.4.1/todas', timeout=0.2)
+	while ((intentos < 5) and (response.status_code != 200)): #200 means ok
+		intentos += 1
+		response = requests.get('http://192.168.4.1/todas', timeout=0.2)
+	return None
+
+@app.route('/velocidad_rapida')
+def velocidad_rapida():
+	intentos = 0
+	response = requests.get('http://192.168.4.1/velocidad_rapida', timeout=0.2)
+	while ((intentos < 5) and (response.status_code != 200)): #200 means ok
+		intentos += 1
+		response = requests.get('http://192.168.4.1/velocidad_rapida', timeout=0.2)
+	return None
+
+@app.route('/velocidad_lenta')
+def velocidad_lenta():
+	intentos = 0
+	response = requests.get('http://192.168.4.1/velocidad_lenta', timeout=0.2)
+	while ((intentos < 5) and (response.status_code != 200)): #200 means ok
+		intentos += 1
+		response = requests.get('http://192.168.4.1/velocidad_lenta', timeout=0.2)
+	return None
+
 @app.route('/turn_left')
 def rutina_turn_left():
-	intentos = 0
-	response = requests.get('http://192.168.4.1/turn_left', timeout=0.2)
-	while ((intentos < 5) and (response.status_code != 200)): #200 means ok
-		response = requests.get('http://192.168.4.1/turn_left', timeout=0.2)
-	return None
+	devol = 345
+	try:
+		print('la conchga de tu madre')
+		r = requests.get('http://192.168.4.1/turn_left', timeout=1.0)
+		print(r.text)
+	except:
+		pass
+	print(r.text)
+	return '', devol
+
 
 @app.route('/turn_right')
 def rutina_turn_right():
