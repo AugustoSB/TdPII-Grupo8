@@ -6,10 +6,8 @@
     <meta charset="utf-8">
     <title>OTTO - Robot interactivo</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap4-toggle.min.css') }}"/>
 	  <link rel="icon" href="{{ url_for('static', filename='images/robot-solid.svg') }}" />
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
-    <script src="{{ url_for('static', filename='bootstrap4-toggle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
   </head>
 
@@ -114,15 +112,17 @@
 
     <div class="row">
       <div class="col-sm">
-        <h2>Sensor de Ultrasonido:</h2>
+        <h2>Sensor de Ultrasonido </h2>
+        <h4>Estado Actual <span class="badge badge-info" id="span_ultrasonido">OFF</span></h4>
         <button id="ul_on" class="btn btn-warning" onclick="back_call('ultrasonido_on');">ON</button>
-        <button id="ul_off" class="btn btn-danger" onclick="back_call('ultrasonido_off');" style="display: none;">OFF</button>
+        <button id="ul_off" class="btn btn-danger" onclick="back_call('ultrasonido_off');">OFF</button>
       </div>
 
       <div class="col-sm">
-        <h2>Velocidad:</h2>
-        <button id="vel_normal" class="btn btn-warning" onclick="llamada_vel('normal');">NORMAL</button>
-        <button id="vel_rapido" class="btn btn-danger" onclick="llamada_vel('rapido');"style="display: none;">RAPIDO</button>
+        <h2>Velocidad </h2>
+        <h4>Estado Actual <span class="badge badge-info" id="span_velocidad">RAPIDO</span></h4>
+        <button id="vel_normal" class="btn btn-warning" onclick="back_call('velocidad_normal');">NORMAL</button>
+        <button id="vel_rapido" class="btn btn-danger" onclick="back_call('velocidad_rapido');">RAPIDO</button>
       </div>
 
     </div>
@@ -136,8 +136,9 @@
 <table class="table table-light">
   <thead class="thead-dark text-center">
     <tr>
-      <th scope="col" style="width: 50%">Acción</th>
-      <th scope="col" style="width: 50%">Tiempo</th>
+      <th scope="col" style="width: 40%">Acción</th>
+      <th scope="col" style="width: 30%">Velocidad</th>
+      <th scope="col" style="width: 30%">Tiempo</th>
     </tr>
   </thead>
   <tbody class="text-center" id="lista_historial">
@@ -146,11 +147,12 @@
 </table>
 </div>
   <footer class="bg-dark footer py-3 mt-20">
+  	<div class="text-center text-white">
+  		<h3 class="text-white">Tecnologias usadas</h3>
+  	</div>
   	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <h3 class="text-white">Tecnologias usadas:</h3>
-
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav m-auto">
       <li class="nav-item active">
         <a class="nav-link text-white" href="https://www.python.org/" target="_blank"><image src="{{ url_for('static', filename='images/python') }}" style="height: 32px;object-fit: cover">Python</a>
       </li>
@@ -176,7 +178,7 @@
   </div>
 </nav>
 <div class="text-center text-white">
-	Realizado por: Saldivar, Augusto - Machado, Ricardo Emanuel.
+	Realizado por: Saldivar, Augusto - Machado, Ricardo Emanuel
 </div>
 
 
