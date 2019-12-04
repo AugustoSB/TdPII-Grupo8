@@ -8,6 +8,15 @@ if(llamado == 'ultrasonido_on'){
 	document.getElementById("ul_off").style.display = 'none';
 }
 
+function llamada_vel(data){
+	if(data == 'normal'){
+		document.getElementById("vel_normal").style.display = 'none';
+		document.getElementById("vel_rapido").style.display = 'inline-block';
+	}else{
+		document.getElementById("vel_normal").style.display = 'inline-block';
+		document.getElementById("vel_rapido").style.display = 'none';
+	}
+}
 var d = new Date();
 	var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
 
@@ -22,7 +31,7 @@ var cell2 = row.insertCell(1);
 
 // Add some text to the new cells:
 cell1.innerHTML = llamado;
-cell2.innerHTML = time; 
+cell2.innerHTML = time;
 
 
 	$.ajax({
