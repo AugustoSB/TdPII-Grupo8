@@ -11,10 +11,58 @@ app = Flask(__name__)
 def principal():
 	return render_template('pag.html')
 
+
+
+
+
+@app.route('/todas')
+def todas():
+	try:
+		response = requests.get('http://192.168.4.1/todas', timeout=0.2)
+	except:
+		pass
+	return '', 204
+
+@app.route('/velocidad_rapido')
+def velocidad_rapida():
+	try:
+		response = requests.get('http://192.168.4.1/velocidad_rapida', timeout=0.2)
+	except:
+		pass
+	return '', 204
+
+@app.route('/velocidad_normal')
+def velocidad_lenta():
+	try:
+		response = requests.get('http://192.168.4.1/velocidad_lenta', timeout=0.2)
+	except:
+		pass
+	return '', 204
+
+@app.route('/ultrasonido_on')
+def rutina_ultrasonido_on():
+	try:
+		response = requests.get('http://192.168.4.1/ultrasonido_on', timeout=0.2)
+	except:
+		pass
+	return '', 204
+
+@app.route('/ultrasonido_off')
+def rutina_ultrasonido_off():
+	try:
+		response = requests.get('http://192.168.4.1/ultrasonido_off', timeout=0.2)
+	except:
+		pass
+	return '', 204
+
+
+
+
+
 @app.route('/walk_forward')
 def rutina_walk_forward():
 	try:
-		requests.get('http://192.168.4.1/walk_forward', timeout=0.2)
+		r = requests.get('http://192.168.4.1/walk_forward', timeout=0.2)
 	except:
 		pass
 	return '', 204
@@ -22,55 +70,23 @@ def rutina_walk_forward():
 @app.route('/walk_backward')
 def rutina_walk_backward():
 	try:
-		requests.get('http://192.168.4.1/walk_backward', timeout=0.2)
+		r = requests.get('http://192.168.4.1/walk_backward', timeout=0.2)
 	except:
 		pass
 	return '', 204
 
-@app.route('/todas')
-def todas():
-	intentos = 0
-	response = requests.get('http://192.168.4.1/todas', timeout=0.2)
-	while ((intentos < 5) and (response.status_code != 200)): #200 means ok
-		intentos += 1
-		response = requests.get('http://192.168.4.1/todas', timeout=0.2)
-	return None
-
-@app.route('/velocidad_rapida')
-def velocidad_rapida():
-	intentos = 0
-	response = requests.get('http://192.168.4.1/velocidad_rapida', timeout=0.2)
-	while ((intentos < 5) and (response.status_code != 200)): #200 means ok
-		intentos += 1
-		response = requests.get('http://192.168.4.1/velocidad_rapida', timeout=0.2)
-	return None
-
-@app.route('/velocidad_lenta')
-def velocidad_lenta():
-	intentos = 0
-	response = requests.get('http://192.168.4.1/velocidad_lenta', timeout=0.2)
-	while ((intentos < 5) and (response.status_code != 200)): #200 means ok
-		intentos += 1
-		response = requests.get('http://192.168.4.1/velocidad_lenta', timeout=0.2)
-	return None
-
 @app.route('/turn_left')
 def rutina_turn_left():
-	devol = 345
 	try:
-		print('la conchga de tu madre')
-		r = requests.get('http://192.168.4.1/turn_left', timeout=1.0)
-		print(r.text)
+		r = requests.get('http://192.168.4.1/turn_left', timeout=0.2)
 	except:
 		pass
-	print(r.text)
-	return '', devol
-
+	return '', 204
 
 @app.route('/turn_right')
 def rutina_turn_right():
 	try:
-		requests.get('http://192.168.4.1/turn_right', timeout=0.2)
+		r = requests.get('http://192.168.4.1/turn_right', timeout=0.2)
 	except:
 		pass
 	return '', 204
@@ -94,7 +110,7 @@ def rutina_bend():
 @app.route('/shake_leg')
 def rutina_shake_leg():
 	try:
-		requests.get('http://192.168.4.1/shake_leg', timeout=0.2)
+		r = requests.get('http://192.168.4.1/shake_leg', timeout=0.2)
 	except:
 		pass
 	return '', 204
@@ -102,7 +118,7 @@ def rutina_shake_leg():
 @app.route('/crusaito')
 def rutina_crusaito():
 	try:
-		requests.get('http://192.168.4.1/crusaito', timeout=0.2)
+		r = requests.get('http://192.168.4.1/crusaito', timeout=0.2)
 	except:
 		pass
 	return '', 204
@@ -118,7 +134,7 @@ def rutina_flapping():
 @app.route('/swing')
 def rutina_swing():
 	try:
-		requests.get('http://192.168.4.1/swing', timeout=0.2)
+		r = requests.get('http://192.168.4.1/swing', timeout=0.2)
 	except:
 		pass
 	return '', 204
@@ -126,7 +142,7 @@ def rutina_swing():
 @app.route('/tiptoe_swing')
 def rutina_tiptoe_swing():
 	try:
-		requests.get('http://192.168.4.1/tiptoe_swing', timeout=0.2)
+		r = requests.get('http://192.168.4.1/tiptoe_swing', timeout=0.2)
 	except:
 		pass
 	return '', 204
@@ -231,22 +247,6 @@ def rutina_fart():
 def rutina_fail():
 	try:
 		r = requests.get('http://192.168.4.1/fail', timeout=0.2)
-	except:
-		pass
-	return '', 204
-
-@app.route('/ultrasonido_on')
-def rutina_ultrasonido_on():
-	try:
-		r = requests.get('http://192.168.4.1/ultrasonido_on', timeout=0.2)
-	except:
-		pass
-	return '', 204
-
-@app.route('/ultrasonido_off')
-def rutina_ultrasonido_off():
-	try:
-		r = requests.get('http://192.168.4.1/ultrasonido_off', timeout=0.2)
 	except:
 		pass
 	return '', 204
