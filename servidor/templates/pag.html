@@ -6,8 +6,10 @@
     <meta charset="utf-8">
     <title>OTTO - Robot interactivo</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}"/>
-	<link rel="icon" href="{{ url_for('static', filename='images/robot-solid.svg') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap4-toggle.min.css') }}"/>
+	  <link rel="icon" href="{{ url_for('static', filename='images/robot-solid.svg') }}" />
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap4-toggle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
   </head>
 
@@ -108,20 +110,26 @@
     </div>
   </div>
 </div>
-    <div class="container text-center mt-5">
+  <div class="container text-center mt-5">
 
+    <div class="row">
+      <div class="col-sm">
+        <h2>Sensor de Ultrasonido:</h2>
+        <button id="ul_on" class="btn btn-warning" onclick="back_call('ultrasonido_on');">ON</button>
+        <button id="ul_off" class="btn btn-danger" onclick="back_call('ultrasonido_off');" style="display: none;">OFF</button>
+      </div>
 
-	    	<h2>Sensor de Ultrasonido:</h2>
-	    	<button id="ul_on" class="btn btn-warning" onclick="back_call('ultrasonido_on');">ON</button>
-	    	<button id="ul_off" class="btn btn-danger" onclick="back_call('ultrasonido_off');" style="display: none;">OFF</button>
+      <div class="col-sm">
+        <h2>Velocidad:</h2>
+        <button id="vel_normal" class="btn btn-warning" onclick="llamada_vel('normal');">NORMAL</button>
+        <button id="vel_rapido" class="btn btn-danger" onclick="llamada_vel('rapido');"style="display: none;">RAPIDO</button>
+      </div>
+
+    </div>
 
 
 	</div>
-  <div class="container text-center">
-  <div class="custom-control custom-swtich">
-    <input type="checkbox" class="custom-control-input" id="toggleswitch1">
-    <label class="custom-control-label" for="toggleswitch1">Infrarrojo</label>
-  </div></div>
+
 
 <div class="container mt-5 w-25">
 	<h1 class="text-center">Historial</h1>
